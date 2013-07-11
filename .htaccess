@@ -1,4 +1,4 @@
-<Directory .git>
+<Files .git/*>
     order allow,deny
     deny from all
-</Directory>
+</Files>
