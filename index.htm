@@ -112,9 +112,16 @@
 
             #featuredbox .item .image-preview{
                 width: 300px;
-                height: 310px;
+                height: 100%;
                 padding: 0px;
                 margin: 0px;
+                overflow: hidden;
+            }
+            #featuredbox .item .image-preview img{
+                margin: 0px -100px;
+                max-width: 500px;
+                width: 500px;
+                height: 310px;
             }
 
             #featuredbox .item .content-preview{
@@ -261,6 +268,7 @@
                 #featuredbox .item .image-preview img{
                     width: 100%;
                     height: 100%;
+                    margin: 0px;
                 }
 
                 #featuredbox ul.titletabs{
@@ -352,7 +360,7 @@
                             <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
                         </div>
                         <div class="image-preview pull-right">
-                            <img src="/menino.png" />
+                            <img src="/menino.png" data-at2x="menino@2x.png" />
                         </div>
                     </div>
                     <div class="clearfix system-hr"></div>
