@@ -17,6 +17,8 @@
             body{
                 color: #222;
             }
+
+            /* staremaster */
             .staremaster{
                 width: 100%;
                 margin-bottom: 60px;
@@ -33,6 +35,8 @@
               margin-left: 50px;
             }
 
+
+            /* the navbar */
             ul#thenavbar{
                 margin-top: 20px;
                 margin-left: 10px;
@@ -68,11 +72,13 @@
                 background: transparent;
                 width: 80px;
             }
+
             ul#thenavbar li.searchbox{
                 padding: 0px;
                 height: 45px;
                 width: 245px;
             }
+
             ul#thenavbar li.searchbox input{
                 height: 42px;
                 width: 200px;
@@ -84,6 +90,67 @@
                 border-radius: 0;
                 background: url(assets/img/template/search_icon.png) center right no-repeat #004D67;
             }   
+
+            /* featuredbox */
+            #featuredbox{
+                border-top: #004D67 5px solid;
+                background: #333;
+                width: 600px;
+                height: 400px;
+                margin-left: 10px;
+            }
+
+            #featuredbox .item{
+                color: #fff;
+                height: 310px;
+            }
+
+            #featuredbox .item h3{
+                line-height: 30px;
+                font-weight: 400;
+            }
+
+            #featuredbox .item .image-preview{
+                width: 300px;
+                height: 310px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            #featuredbox .item .content-preview{
+                width: 280px;
+                height: 100%;
+                padding: 0px 2px 10px 10px;
+                font-weight: 300;
+            }
+
+            #featuredbox ul.titletabs{
+                display: block;
+                width: 600px;
+                height: 80px;
+                list-style-type: none;
+                margin: 0px;
+            }
+
+            #featuredbox ul.titletabs li{
+                float: left;
+                height: 60px;
+                width: 129px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 10px;
+                border-left: #222 solid 1px;
+            }
+
+            #featuredbox ul.titletabs li:first-child{
+                border-left: 0px;
+                width: 130px;
+            }
+
+            aside{
+                background: #aaa;
+                width: 300px;
+            }
 
             #wrap{
                 min-height: 100%;
@@ -101,6 +168,31 @@
                 padding-top: 10px;
             }
 
+            span.label{
+                text-transform: uppercase; 
+                color: #222;
+            }
+
+            p.byline{
+                margin: 10px 10px;
+                text-align: center;
+            }
+
+            p.byline span{
+                margin: 0px 10px;
+            }
+
+            span.datestamp{
+                text-transform: uppercase;
+                color: #aaa;
+            }
+
+            .system-hr{
+                display: block;
+                background-color: #004359;
+                width: 100%;
+                height: 10px;
+            }
 
             .videos{
                 background-color: #FF7400;
@@ -150,6 +242,42 @@
                 ul#thenavbar li.spacer{
                     width: 150px;
                 }
+
+
+                #featuredbox{
+                    width: 800px;
+                    height: 420px;
+                }
+
+                #featuredbox .item{
+                    height: 330px;
+                }
+
+                #featuredbox .item .image-preview{
+                    width: 500px;
+                    height: 330px;
+                }
+
+                #featuredbox .item .image-preview img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+                #featuredbox ul.titletabs{
+                    width: 800px;
+                }
+
+                #featuredbox ul.titletabs li{
+                    height: 60px;
+                    width: 179px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 10px;
+                }
+
+                #featuredbox ul.titletabs li:first-child{
+                    width: 180px;
+                }                
             }
 
             /* less wide window */
@@ -212,44 +340,39 @@
                 </div>
             </header>
 
-            <div class="container">
-                <h1>Hello I Am Stuff To Make The Page Scroll</h1>
-                <h2>lol, autodeploy from git</h2>
-                <p>Bacon ipsum dolor sit amet bacon pastrami fatback, rump tail turducken t-bone swine pig kielbasa doner. Ball tip boudin brisket frankfurter chicken. Capicola boudin tail, doner pork ham bacon rump tri-tip swine tenderloin jowl. Prosciutto pork loin sirloin ground round. Flank bresaola leberkas swine venison meatloaf short loin brisket. Pancetta bacon turducken corned beef rump short loin flank bresaola meatball. Meatball rump cow, sirloin tenderloin boudin brisket andouille pancetta tail meatloaf spare ribs venison.</p>
+            <div class="container"><!--main page container-->
 
-                <p>Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.</p>
+                <div id="featuredbox" class="pull-left">
+                    <div class="item active">
+                        <div class="content-preview pull-left">
+                            <h3>Boston Mayor Thomas M. Menino</h3>
+                            <p class="byline">
+                                <span class="label articles">Article</span> <span class="datestamp">March 28, 2013</span>
+                            </p>
+                            <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
+                        </div>
+                        <div class="image-preview pull-right">
+                            <img src="/menino.png" />
+                        </div>
+                    </div>
+                    <div class="clearfix system-hr"></div>
+                    <ul class="titletabs">
+                        <li class="articles">Dunkin Donuts vs. Starbucks</li>
+                        <li class="comics">The Night Before Fistmas</li>
+                        <li class="articles active">Boston Mayor Thomas M. Menino</li>
+                        <li class="videos">The Large Hadron Collider</li>
+                    </ul>
+                </div>
 
-                <p>Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.</p>
+                <aside class="pull-right">
+                    <p>poop box is for poop stuff</p>
+                    <p><button>poop butten is push for poop</button></p>
+                </aside>
 
-                <p>Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.</p>
-
-                <p>Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.</p>
-
-                <p>Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.</p>
-
-
-                <p>Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.</p>
-
-                <p>Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.</p>
-
-                <p>Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.</p>
-
-                <p>Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.</p>
-
-                <p>Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.</p>
-
-
-                <p>Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.</p>
-
-                <p>Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.</p>
-
-                <p>Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.</p>
-
-                <p>Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.</p>
-
-                <p>Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.Capicola ribeye bacon pancetta ground round shoulder doner chicken beef ribs shank boudin turducken. Jerky tongue swine ground round, pig shankle cow filet mignon short loin rump venison strip steak ball tip. Prosciutto turducken flank kielbasa tail. Ham hock prosciutto pancetta, bacon biltong bresaola spare ribs. Beef ribs pig meatloaf andouille, ham brisket shoulder ham hock sirloin.Chuck doner biltong shank, bacon ribeye ground round. Pork pork chop turducken pancetta, hamburger pork loin tail ham hock chuck flank. Ball tip tongue andouille bacon tenderloin. Rump jowl ham fatback. Pig venison pork loin pastrami prosciutto rump beef ribs boudin cow. Filet mignon ground round tri-tip flank fatback meatloaf, salami capicola hamburger bresaola tail spare ribs frankfurter.Tongue strip steak meatloaf shankle tri-tip rump frankfurter turkey flank ham chicken meatball jerky. Pork chop ham hock chuck shankle, rump pig andouille. Frankfurter pork chop ribeye, sirloin turducken tongue corned beef hamburger swine salami pork ball tip fatback. Tail meatball shank drumstick.</p>
+                <div class="clearfix"></div>
             </div>
-        </div>
+
+        </div><!--/main container-->
 
 
         <footer>
