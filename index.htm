@@ -181,19 +181,21 @@
                 color: #fff;
                 background-color: #333;
                 padding: 10px;
+                font-weight: 300;
             }
 
             #postgrid .image-preview{
                 overflow: hidden;
-                width: 420px;
+                width: 100%;
             }
 
             #postgrid .image-preview img{
-                width: 420px;
+                width: 100%;
+                height: 100%;
             }
 
             #postgrid .content-preview h3{
-                line-height: 30px;
+                line-height: 28px;
                 font-weight: 400;
             }
 
@@ -325,6 +327,30 @@
                 border-top: #004D67 5px solid;
             }
 
+            .bottombar-videos{
+                border-bottom: #FF7400 5px solid;
+            }
+
+            .bottombar-comics{
+                border-bottom: #FFE300 5px solid;
+            }
+
+            .bottombar-articles{
+                border-bottom: #BEDD22 5px solid;
+            }
+
+            .bottombar-junk{
+                border-bottom: #158B70 5px solid;
+            }
+
+            .bottombar-system1{
+                border-bottom: #004359 5px solid;
+            }
+
+            .bottombar-system2{
+                border-bottom: #004D67 5px solid;
+            }
+
             /* it's like an inbox full of emails from HR in here */
 
             /* wider window */
@@ -374,39 +400,14 @@
                     width: 180px;
                 }       
 
-                /* postgrid */
-                #postgrid{
-                    padding-left: 10px;
-                }
+
+                /* post grid */
                 #postgrid .post-preview{
-                    float: left;
                     width: 540px;
-                    background: #333;
-                    margin: 20px;
                 }
-
                 #postgrid .content-preview{
-                    color: #fff;
-                    float: left;
-                    width: 200px;
-                    background-color: #333;
-                    padding: 10px;
+                    font-size: 15px;
                 }
-
-                #postgrid .image-preview{
-                    overflow: hidden;
-                    float: right;
-                    width: 320px;
-                }
-
-                #postgrid .image-preview img{
-                    width: 320px;
-                }
-
-                #postgrid .content-preview h3{
-                    line-height: 30px;
-                    font-weight: 400;
-                }         
             }
 
             /* less wide window */
@@ -515,7 +516,7 @@
                 <div class="container"><!-- other...main container?-->
                     <h2>Recent Posts</h2>
 
-                    <div class="post-preview topbar-articles">
+                    <div class="post-preview topbar-articles bottombar-articles">
                         <div class="content-preview">
                             <h3>Boston Mayor Thomas M. Menino</h3>
                             <p class="byline">
@@ -528,7 +529,7 @@
                         </div>
                     </div>
 
-                    <div class="post-preview topbar-videos">
+                    <div class="post-preview topbar-videos bottombar-videos">
                         <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
@@ -541,7 +542,7 @@
                         </div>
                     </div>
 
-                    <div class="post-preview topbar-videos">
+                    <div class="post-preview topbar-videos bottombar-videos">
                         <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
@@ -554,7 +555,7 @@
                         </div>
                     </div>
 
-                    <div class="post-preview topbar-videos">
+                    <div class="post-preview topbar-videos bottombar-videos">
                         <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
@@ -567,7 +568,7 @@
                         </div>
                     </div>
 
-                    <div class="post-preview topbar-videos">
+                    <div class="post-preview topbar-videos bottombar-videos">
                         <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
