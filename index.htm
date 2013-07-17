@@ -188,6 +188,10 @@
                 width: 420px;
             }
 
+            #postgrid .image-preview img{
+                width: 420px;
+            }
+
             #postgrid .content-preview h3{
                 line-height: 30px;
                 font-weight: 400;
@@ -325,6 +329,7 @@
 
             /* wider window */
             @media (min-width: 1200px) {
+                /* thenavbar */
                 ul#thenavbar li{
                     width: 150px;
                 }
@@ -332,7 +337,7 @@
                     width: 150px;
                 }
 
-
+                /* featuredbox */
                 #featuredbox{
                     width: 800px;
                     height: 420px;
@@ -367,7 +372,41 @@
 
                 #featuredbox ul.titletabs li:first-child{
                     width: 180px;
-                }                
+                }       
+
+                /* postgrid */
+                #postgrid{
+                    padding-left: 10px;
+                }
+                #postgrid .post-preview{
+                    float: left;
+                    width: 540px;
+                    background: #333;
+                    margin: 20px;
+                }
+
+                #postgrid .content-preview{
+                    color: #fff;
+                    float: left;
+                    width: 200px;
+                    background-color: #333;
+                    padding: 10px;
+                }
+
+                #postgrid .image-preview{
+                    overflow: hidden;
+                    float: right;
+                    width: 320px;
+                }
+
+                #postgrid .image-preview img{
+                    width: 320px;
+                }
+
+                #postgrid .content-preview h3{
+                    line-height: 30px;
+                    font-weight: 400;
+                }         
             }
 
             /* less wide window */
@@ -476,67 +515,67 @@
                 <div class="container"><!-- other...main container?-->
                     <h2>Recent Posts</h2>
 
-                    <div class="post-preview">
-                        <div class="content-preview pull-left topbar-articles">
+                    <div class="post-preview topbar-articles">
+                        <div class="content-preview">
                             <h3>Boston Mayor Thomas M. Menino</h3>
                             <p class="byline">
                                 <span class="label articles">Article</span> <span class="datestamp">March 28, 2013</span>
                             </p>
                             <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
                         </div>
-                        <div class="image-preview pull-right">
+                        <div class="image-preview">
                             <img src="/menino.png" data-at2x="menino@2x.png" />
                         </div>
                     </div>
 
-                    <div class="post-preview">
-                        <div class="content-preview pull-left topbar-videos">
+                    <div class="post-preview topbar-videos">
+                        <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
                                 <span class="label videos">video</span> <span class="datestamp">November 12, 2012</span>
                             </p>
                             <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
                         </div>
-                        <div class="image-preview pull-right">
+                        <div class="image-preview">
                             <img src="/menino.png" data-at2x="menino@2x.png" />
                         </div>
                     </div>
 
-                    <div class="post-preview">
-                        <div class="content-preview pull-left topbar-videos">
+                    <div class="post-preview topbar-videos">
+                        <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
                                 <span class="label videos">video</span> <span class="datestamp">November 12, 2012</span>
                             </p>
                             <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
                         </div>
-                        <div class="image-preview pull-right">
+                        <div class="image-preview">
                             <img src="/menino.png" data-at2x="menino@2x.png" />
                         </div>
                     </div>
 
-                    <div class="post-preview">
-                        <div class="content-preview pull-left topbar-videos">
+                    <div class="post-preview topbar-videos">
+                        <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
                                 <span class="label videos">video</span> <span class="datestamp">November 12, 2012</span>
                             </p>
                             <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
                         </div>
-                        <div class="image-preview pull-right">
+                        <div class="image-preview">
                             <img src="/menino.png" data-at2x="menino@2x.png" />
                         </div>
                     </div>
 
-                    <div class="post-preview">
-                        <div class="content-preview pull-left topbar-videos">
+                    <div class="post-preview topbar-videos">
+                        <div class="content-preview">
                             <h3>A Totally Different Post I swear</h3>
                             <p class="byline">
                                 <span class="label videos">video</span> <span class="datestamp">November 12, 2012</span>
                             </p>
                             <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
                         </div>
-                        <div class="image-preview pull-right">
+                        <div class="image-preview">
                             <img src="/menino.png" data-at2x="menino@2x.png" />
                         </div>
                     </div>
