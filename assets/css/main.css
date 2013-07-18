@@ -442,6 +442,11 @@ span.datestamp{
         margin-left: 0px;
     }
 
+    article.fixed-width{
+        width: 800px;
+        margin-left: 0px;
+    }
+
     article.fixed-width .madmen{
         display: none;
     }
