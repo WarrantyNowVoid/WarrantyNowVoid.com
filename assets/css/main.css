@@ -283,6 +283,9 @@ aside .poop{
     margin-top: 30px;
     text-align: center;
 }
+aside .poop button{
+    width: 100%;
+}
 
 aside.fixed-width{
     display: none;
