@@ -313,6 +313,11 @@ span.label{
     color: #222;
 }
 
+span.label-tag a{
+    text-decoration: none;
+    color: #222;
+}
+
 p.byline{
     margin: 10px 10px;
     text-align: center;
