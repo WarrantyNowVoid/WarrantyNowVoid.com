@@ -332,6 +332,14 @@ span.label{
     color: #222;
 }
 
+span.label-tag{
+    padding-top: 3px;
+}
+
+span.label-tag i{
+    margin-top: -1px;
+}
+
 span.label-tag a{
     text-decoration: none;
     color: #222;
