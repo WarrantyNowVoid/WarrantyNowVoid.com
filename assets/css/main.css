@@ -416,15 +416,23 @@ span.datestamp{
 ul#social-links{
     display: block;
     text-align: center;
-    height: 150px;
     margin: 0px;
     padding: 0px;
     list-style-type: none;
 }
 
+aside ul#social-links{
+    height: 75px;
+}
+
+article ul#social-links{
+    height: 37px;
+}
+
 ul#social-links li{
     display: block;
     float: left;
+    height: 100%;
     margin: 0px;
     padding: 0px;
     margin-left: 1px;
