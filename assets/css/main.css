@@ -306,6 +306,51 @@ aside.fixed-width{
     display: none;
 }
 
+aside .related{
+    margin-top: 30px;
+    text-align: left;
+}
+
+aside .related .label{
+    float: right;
+}
+
+aside .related h3{
+    display: block;
+    margin: 0px;
+    padding-left: 15px;
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+aside #related-posts{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+aside #related-posts li{
+    padding: 10px;
+    background: #333;
+    border-top: #ddd 1px solid
+}
+
+aside #related-posts li .related-name{
+    color: #fff;
+    display: block;
+    width: 220px;
+}
+
+aside #related-posts li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+}
+
 
 
 /* footer */
