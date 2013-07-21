@@ -201,6 +201,7 @@ article{
     float: left;
     width: 600px;
     margin-bottom: 30px;
+    line-height: 24px;
 }
 article.fixed-width{
     float: left;
