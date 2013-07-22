@@ -426,6 +426,10 @@ aside ul#social-links{
     height: 75px;
 }
 
+aside ul#social-links li{
+    width: 75px;
+}
+
 article ul#social-links{
     height: 37px;
 }
@@ -437,6 +441,10 @@ ul#social-links li{
     margin: 0px;
     padding: 0px;
     margin-left: 1px;
+}
+
+ul#social-links li img{
+    display: block;
 }
 
 /* standard colors for post types */
