@@ -54,24 +54,71 @@
             <div class="container"><!--main page container-->
 
                 <div id="featuredbox" class="pull-left">
-                    <div class="item active">
-                        <div class="content-preview pull-left">
-                            <h3>Boston Mayor Thomas M. Menino</h3>
-                            <p class="byline">
-                                <span class="label articles">Article</span> <span class="datestamp">March 28, 2013</span>
-                            </p>
-                            <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
-                        </div>
-                        <div class="image-preview pull-right">
-                            <img src="/menino.png" data-at2x="menino@2x.png" />
-                        </div>
+                    <div class="item active" data-itemid="1">
+                        <a href="/post.htm">
+                            <div class="content-preview pull-left">
+                                <h3>Dunkin Donuts vs. Starbucks</h3>
+                                <p class="byline">
+                                    <span class="label articles">Article</span> <span class="datestamp">March 28, 2012</span>
+                                </p>
+                                <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
+                            </div>
+                            <div class="image-preview pull-right">
+                                <img src="/menino.png" data-at2x="menino@2x.png" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="item" data-itemid="2">
+                        <a href="/post.htm">
+                            <div class="content-preview pull-left">
+                                <h3>The Night Before Fistmas</h3>
+                                <p class="byline">
+                                    <span class="label comics">Comic</span> <span class="datestamp">December 25, 2012</span>
+                                </p>
+                                <p>Oh god why. </p>
+                            </div>
+                            <div class="image-preview pull-right">
+                                <img src="/menino.png" data-at2x="menino@2x.png" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="item" data-itemid="3">
+                        <a href="/post.htm">
+                            <div class="content-preview pull-left">
+                                <h3>Boston Mayor Thomas M. Menino</h3>
+                                <p class="byline">
+                                    <span class="label articles">Article</span> <span class="datestamp">March 28, 2013</span>
+                                </p>
+                                <p>This is where we would put a brief intro or teaser type thing of the article to convince people that it's cool and they should read it. The container won't expand dynamically at all, so these should overall be kept relatively short. Because otherwise the text will overflow down into the tabs below, and my shiny css will actually just truncate it at an awkward point. </p>
+                            </div>
+                            <div class="image-preview pull-right">
+                                <img src="/menino.png" data-at2x="menino@2x.png" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="item" data-itemid="4">
+                        <a href="/post.htm">
+                            <div class="content-preview pull-left">
+                                <h3>The Large Hadron Collider</h3>
+                                <p class="byline">
+                                    <span class="label videos">Video</span> <span class="datestamp">May 22, 2012</span>
+                                </p>
+                                <p>More like Large Hardon Collider amirite </p>
+                            </div>
+                            <div class="image-preview pull-right">
+                                <img src="/menino.png" data-at2x="menino@2x.png" />
+                            </div>
+                        </a>
                     </div>
                     <div class="clearfix system-hr"></div>
                     <ul class="titletabs">
-                        <li class="articles">Dunkin Donuts vs. Starbucks</li>
-                        <li class="comics">The Night Before Fistmas</li>
-                        <li class="articles active">Boston Mayor Thomas M. Menino</li>
-                        <li class="videos">The Large Hadron Collider</li>
+                        <li class="articles active" data-itemid="1">Dunkin Donuts vs. Starbucks</li>
+                        <li class="comics" data-itemid="2">The Night Before Fistmas</li>
+                        <li class="articles" data-itemid="3">Boston Mayor Thomas M. Menino</li>
+                        <li class="videos" data-itemid="4">The Large Hadron Collider</li>
                     </ul>
                 </div>
 
@@ -209,5 +256,15 @@
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="/assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="/assets/js/retina.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('div#featuredbox ul.titletabs li').click(function(eo){
+                    $('div#featuredbox .item.active').removeClass('active');
+                    $('div#featuredbox .item[data-itemid=' + $(this).attr('data-itemid') + ']').addClass('active');
+                    $('div#featuredbox ul.titletabs li.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
+        </script>
     </body>
 </html>

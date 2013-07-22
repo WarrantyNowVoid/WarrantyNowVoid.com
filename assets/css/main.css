@@ -99,8 +99,18 @@ ul#thenavbar li.searchbox input{
 }
 
 #featuredbox .item{
+    display: none;
     color: #fff;
     height: 310px;
+}
+
+#featuredbox .item.active{
+    display: block;
+}
+
+#featuredbox .item a{
+    text-decoration: none;
+    color: #fff;
 }
 
 #featuredbox .item h3{
@@ -145,6 +155,7 @@ ul#thenavbar li.searchbox input{
     font-weight: 500;
     padding: 10px;
     border-left: #222 solid 1px;
+    cursor: pointer;
 }
 
 #featuredbox ul.titletabs li.active{
