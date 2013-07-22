@@ -173,6 +173,10 @@ ul#thenavbar li.searchbox input{
     margin: 20px;
 }
 
+#postgrid .post-preview a{
+    text-decoration: none;
+}
+
 #postgrid .content-preview{
     color: #fff;
     background-color: #333;
