@@ -279,11 +279,13 @@
                 $('div#featuredbox ul.titletabs li.active').removeClass('active');
                 $('div#featuredbox ul.titletabs li[data-itemid=' + itemid + ']').addClass('active');
             }
-            var intervalID = window.setInterval(nextFeature, 15000);
+            var intervalID = window.setInterval(nextFeature, 10000);
 
             $(document).ready(function(){
                 $('div#featuredbox ul.titletabs li').click(function(eo){
                     switchToFeature($(this).attr('data-itemid'))
+                    window.clearInterval(intervalID);
+                    intervalID = window.setInterval(nextFeature, 10000);
                 });
             });
         </script>
