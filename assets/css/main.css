@@ -349,7 +349,8 @@ aside #related-posts{
 aside #related-posts li{
     padding: 0px 10px;
     background: #ddd;
-    border-top: #fff 1px solid
+    border-top: #fff 1px solid;
+    transition: background-color 0.2s;
 }
 
 aside #related-posts li .related-name{
@@ -465,23 +466,29 @@ ul#social-links li img{
 /* standard colors for post types */
 .videos{
     background-color: #FF7400 !important;
+    transition: background-color 0.2s !important;
 }
 .comics{
     background-color: #FFE300 !important;
+    transition: background-color 0.2s !important;
 }
 .articles{
     background-color: #BEDD22 !important;
+    transition: background-color 0.2s !important;
 }
 .junk{
     background-color: #158B70 !important;
+    transition: background-color 0.2s !important;
 }
 .system1{
     color: #fff;
     background-color: #004359 !important;
+    transition: background-color 0.2s !important;
 }
 .system2{
     color: #fff;
     background-color: #004D67 !important;
+    transition: background-color 0.2s !important;
 }
 
 .videos:hover{
