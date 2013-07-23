@@ -111,17 +111,19 @@
                                 <p>More like Large Hardon Collider amirite </p>
                             </div>
                             <div class="image-preview pull-right">
-                                <img src="/menino.png" data-at2x="menino@2x.png" />
+                                <img src="/lhc.png" data-at2x="lhc@2x.png" />
                             </div>
                         </a>
                     </div>
-                    <div class="clearfix system-hr"></div>
-                    <ul class="titletabs">
-                        <li class="articles active" data-itemid="1">Dunkin Donuts vs. Starbucks</li>
-                        <li class="comics" data-itemid="2">The Night Before Fistmas</li>
-                        <li class="articles" data-itemid="3">Boston Mayor Thomas M. Menino</li>
-                        <li class="videos" data-itemid="4">The Large Hadron Collider</li>
-                    </ul>
+                    <div id="featured-nav">
+                        <div class="system-hr"></div>
+                        <ul class="titletabs">
+                            <li class="articles active" data-itemid="1">Dunkin Donuts vs. Starbucks</li>
+                            <li class="comics" data-itemid="2">The Night Before Fistmas</li>
+                            <li class="articles" data-itemid="3">Boston Mayor Thomas M. Menino</li>
+                            <li class="videos" data-itemid="4">The Large Hadron Collider</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <aside class="pull-right">
@@ -259,12 +261,29 @@
         <script src="/assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="/assets/js/retina.js"></script>
         <script type="text/javascript">
+            function nextFeature(){
+                current = parseInt($('div#featuredbox .item.active').attr('data-itemid'));
+                if(current == 4){
+                    next = 1;
+                }else{
+                    next = current + 1;
+                }
+
+                switchToFeature(next);
+            }
+
+            function switchToFeature(itemid){
+                $('div#featuredbox .item.active').removeClass('active');
+                $('div#featuredbox .item[data-itemid=' + itemid + ']').addClass('active');
+
+                $('div#featuredbox ul.titletabs li.active').removeClass('active');
+                $('div#featuredbox ul.titletabs li[data-itemid=' + itemid + ']').addClass('active');
+            }
+            var intervalID = window.setInterval(nextFeature, 15000);
+
             $(document).ready(function(){
                 $('div#featuredbox ul.titletabs li').click(function(eo){
-                    $('div#featuredbox .item.active').removeClass('active');
-                    $('div#featuredbox .item[data-itemid=' + $(this).attr('data-itemid') + ']').addClass('active');
-                    $('div#featuredbox ul.titletabs li.active').removeClass('active');
-                    $(this).addClass('active');
+                    switchToFeature($(this).attr('data-itemid'))
                 });
             });
         </script>

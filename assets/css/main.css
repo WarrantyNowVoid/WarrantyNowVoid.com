@@ -99,13 +99,15 @@ ul#thenavbar li.searchbox input{
 }
 
 #featuredbox .item{
-    display: none;
+    opacity: 0;
     color: #fff;
     height: 310px;
+    position: absolute;
+    transition: opacity 0.5s;
 }
 
 #featuredbox .item.active{
-    display: block;
+    opacity: 1.0;
 }
 
 #featuredbox .item a{
@@ -122,7 +124,7 @@ ul#thenavbar li.searchbox input{
     width: 300px;
     height: 100%;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px 0px 8px;
     overflow: hidden;
 }
 #featuredbox .item .image-preview img{
@@ -137,6 +139,10 @@ ul#thenavbar li.searchbox input{
     height: 100%;
     padding: 0px 2px 10px 10px;
     font-weight: 300;
+}
+
+#featuredbox #featured-nav{
+    margin-top: 310px;
 }
 
 #featuredbox ul.titletabs{
@@ -629,6 +635,11 @@ ul#social-links li img{
         width: 100%;
         height: 100%;
         margin: 0px;
+    }
+
+
+    #featuredbox #featured-nav{
+        margin-top: 330px;
     }
 
     #featuredbox ul.titletabs{
