@@ -279,7 +279,7 @@
                 $('div#featuredbox ul.titletabs li.active').removeClass('active');
                 $('div#featuredbox ul.titletabs li[data-itemid=' + itemid + ']').addClass('active');
             }
-            //var intervalID = window.setInterval(nextFeature, 10000);
+            var intervalID = window.setInterval(nextFeature, 10000);
 
             $(document).ready(function(){
                 $('div#featuredbox ul.titletabs li').click(function(eo){
