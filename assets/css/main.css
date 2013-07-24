@@ -129,9 +129,9 @@ ul#thenavbar li.searchbox input{
     overflow: hidden;
 }
 #featuredbox .item .image-preview img{
-    margin: 0px -100px;
-    max-width: 500px;
-    width: 500px;
+    margin: 0px;
+    margin-left: -25%;
+    max-width: none;
     height: 310px;
 }
 
@@ -640,9 +640,8 @@ ul#social-links li img{
     }
 
     #featuredbox .item .image-preview img{
-        width: 100%;
-        height: 100%;
-        margin: 0px;
+        height: 330px;
+        margin-left: 0px;
     }
 
 
