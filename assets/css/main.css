@@ -104,6 +104,7 @@ ul#thenavbar li.searchbox input{
     height: 310px;
     position: absolute;
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 }
 
 #featuredbox .item.active{
@@ -357,6 +358,7 @@ aside #related-posts li{
     background: #ddd;
     border-top: #fff 1px solid;
     transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
 }
 
 aside #related-posts li .related-name{
@@ -473,28 +475,34 @@ ul#social-links li img{
 .videos{
     background-color: #FF7400 !important;
     transition: background-color 0.2s !important;
+    -webkit-transition: background-color 0.2s !important;
 }
 .comics{
     background-color: #FFE300 !important;
     transition: background-color 0.2s !important;
+    -webkit-transition: background-color 0.2s !important;
 }
 .articles{
     background-color: #BEDD22 !important;
     transition: background-color 0.2s !important;
+    -webkit-transition: background-color 0.2s !important;
 }
 .junk{
     background-color: #158B70 !important;
     transition: background-color 0.2s !important;
+    -webkit-transition: background-color 0.2s !important;
 }
 .system1{
     color: #fff;
     background-color: #004359 !important;
     transition: background-color 0.2s !important;
+    -webkit-transition: background-color 0.2s !important;
 }
 .system2{
     color: #fff;
     background-color: #004D67 !important;
     transition: background-color 0.2s !important;
+    -webkit-transition: background-color 0.2s !important;
 }
 
 .videos:hover{
