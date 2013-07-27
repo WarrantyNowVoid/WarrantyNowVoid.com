@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <title>Warranty Now Void</title>
@@ -11,6 +11,9 @@
         <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href="/assets/css/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/main.css" rel="stylesheet">
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="/assets/js/modernizr.min.js"></script>
 
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -243,15 +246,28 @@
         </div><!--/wrap-->
 
 
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="span3 offset2">
-                        <br />
-                        &copy 2013 Warranty Now Void
+        <footer class="rotateNormal">
+            <div class="footer-perspective">
+                <div class="container footer-front">
+                    <div class="row">
+                        <div class="span3 offset2">
+                            <br />
+                            &copy 2013 Warranty Now Void
+                        </div>
+                        <div class="span3 offset2">
+                            <img class="bottom-logo" src="/assets/img/template/wnv_small_white.png" data-at2x="/assets/img/template/wnv_small_white@2x.png"  /> 
+                        </div>
                     </div>
-                    <div class="span3 offset2">
-                        <img src="/assets/img/template/wnv_small_white.png" data-at2x="/assets/img/template/wnv_small_white@2x.png"  /> 
+                </div>
+                <div class="container footer-back">
+                    <div class="row">
+                        <div class="span3 offset2">
+                            <br />
+                            HAHAHA, OH WOW
+                        </div>
+                        <div class="span3 offset2">
+                            <img class="bottom-logo" src="/assets/img/template/wnv_small_white.png" data-at2x="/assets/img/template/wnv_small_white@2x.png"  /> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,34 +276,6 @@
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="/assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="/assets/js/retina.js"></script>
-        <script type="text/javascript">
-            function nextFeature(){
-                current = parseInt($('div#featuredbox .item.active').attr('data-itemid'));
-                if(current == 4){
-                    next = 1;
-                }else{
-                    next = current + 1;
-                }
-
-                switchToFeature(next);
-            }
-
-            function switchToFeature(itemid){
-                $('div#featuredbox .item.active').removeClass('active');
-                $('div#featuredbox .item[data-itemid=' + itemid + ']').addClass('active');
-
-                $('div#featuredbox ul.titletabs li.active').removeClass('active');
-                $('div#featuredbox ul.titletabs li[data-itemid=' + itemid + ']').addClass('active');
-            }
-            var intervalID = window.setInterval(nextFeature, 10000);
-
-            $(document).ready(function(){
-                $('div#featuredbox ul.titletabs li').click(function(eo){
-                    switchToFeature($(this).attr('data-itemid'))
-                    window.clearInterval(intervalID);
-                    intervalID = window.setInterval(nextFeature, 10000);
-                });
-            });
-        </script>
+        <script type="text/javascript" src="/assets/js/page.js"></script>
     </body>
 </html>

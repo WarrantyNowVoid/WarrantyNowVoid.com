@@ -1,0 +1,70 @@
+/*!
+ * WarrantyNowVoid v4.0
+ *
+ * Copyright 2013 WarrantyNowVoid.com
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built half-drunk and mostly insane by @pettazz.
+ *
+ * Experimental bullshit. Modern browsers only. 
+ */
+h2{
+    color: #ff0000;
+}
+
+footer img.bottom-logo{
+    cursor: pointer;
+}
+
+.footer-perspective{
+    -webkit-perspective: 1100px;
+    -webkit-perspective-origin: 50% 0;
+
+    -moz-perspective: 1100px;
+    -moz-perspective-origin: 50% 0;
+}
+
+footer.rotateNormal .footer-front{
+    -webkit-transform: translateY(0%) rotateX(0deg);
+    -webkit-transform-origin: 50% 60px;
+    -webkit-backface-visibility: hidden;
+
+    -moz-transform: translateY(0%) rotateX(0deg);
+    -moz-transform-origin: 50% 60px;
+    -moz-backface-visibility: hidden;
+
+    transition: all 0.5s;
+}
+
+footer.rotateSpecial .footer-front{
+    -webkit-transform: translateY(-100%) rotateX(90deg);
+
+    -moz-transform: translateY(-100%) rotateX(90deg);
+
+    transition: all 0.5s;
+}
+
+.footer-back{
+    display: block;
+}
+
+footer.rotateNormal .footer-back{
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 30px;
+    -webkit-backface-visibility: hidden;
+
+    -moz-transform: rotateX(-90deg);
+    -moz-transform-origin: 50% 30px;
+    -moz-backface-visibility: hidden;
+
+    transition: all 0.5s;
+}
+
+footer.rotateSpecial .footer-back{
+    -webkit-transform: rotateX(0deg) translateY(-100%);
+
+    -moz-transform: rotateX(0deg) translateY(-100%);
+
+    transition: all 0.5s;
+}
