@@ -385,7 +385,6 @@ aside #related-posts li a{
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    /* Negative indent footer by it's height */
     margin-bottom: 0px;
 }
 
