@@ -15,6 +15,10 @@ Modernizr.load({
     yep : '/assets/css/experimental.css'
 }); 
 
+//determine if this is @2x territory
+var isRetina = window.devicePixelRatio > 1;
+console.log('@2x support: ' + isRetina);
+
 
 
 function nextFeature(){
@@ -37,6 +41,11 @@ function switchToFeature(itemid){
 }
 var intervalID = window.setInterval(nextFeature, 10000);
 
+var poopActive = false;
+var poopTimer = false;
+var poopAnim;
+var pooCounter = 0;
+
 $(document).ready(function(){
 
     if(Modernizr.csstransforms3d){
@@ -52,4 +61,50 @@ $(document).ready(function(){
         window.clearInterval(intervalID);
         intervalID = window.setInterval(nextFeature, 10000);
     });
+
+    // poop button
+    $('#poopButton').click(function(eo){
+        poopAnim = new Image();
+        poopAnim.src = '/assets/img/template/poop_pooping' + (isRetina? '@2x' : '') + '.gif?lol=' + Math.random();
+        if(!poopActive){
+            poopActive = true;
+            pooCounter++;
+            console.log('POOP NUMBER ' + pooCounter + ' INBOUND!');
+
+            var viewportWidth = $(window).width();
+            var viewportHeight = $(window).height();
+
+            var poopDestinationX = Math.floor((Math.random() * (viewportWidth - 400)) + 200);
+            var poopDestinationY = $(window).scrollTop() + viewportHeight / 3;
+
+            $("#poopGuy").offset({ top: poopDestinationY, left: viewportWidth + 100 });
+            $("#poopGuy").show();
+            $("#poopGuy").addClass('walking');
+            $("#poopGuy").animate({ left: poopDestinationX }, 5000, 'linear', function(){
+                $("#poopGuy").removeClass('walking');
+                $("#poopGuy").css('background-image', 'url(' + poopAnim.src + ')');
+                poopTimer = window.setInterval(finishPooping, 4500);
+            });
+        }
+    });
 });
+
+
+function finishPooping(){
+    window.clearInterval(poopTimer);
+    poopAnim = false;
+    spawnPoop($("#poopGuy").position());
+    $("#poopGuy").css('background-image', '');
+    $("#poopGuy").addClass('walking');
+    $("#poopGuy").animate({ left: -250 }, 5000, 'linear', function(){
+        poopActive = false;
+        $("#poopGuy").removeClass('walking');
+        console.log('DONE POOPING!');
+    });
+}
+
+function spawnPoop(offset){
+    var newPoo = $('<div class="aPoop"></div>');
+    newPoo.offset({ top: offset.top + 340, left: offset.left + 159 });
+    $('body').prepend(newPoo);
+}
