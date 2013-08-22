@@ -93,7 +93,9 @@ $(document).ready(function(){
 function finishPooping(){
     window.clearInterval(poopTimer);
     poopAnim = false;
-    spawnPoop($("#poopGuy").position());
+    var offset = $("#poopGuy").position();
+    // offset for the diff in rects on poopguy and apoop
+    spawnPoop({ top: offset.top + 340, left: offset.left + 159 });
     $("#poopGuy").css('background-image', '');
     $("#poopGuy").addClass('walking');
     $("#poopGuy").animate({ left: -250 }, 5000, 'linear', function(){
@@ -105,6 +107,6 @@ function finishPooping(){
 
 function spawnPoop(offset){
     var newPoo = $('<div class="aPoop"></div>');
-    newPoo.offset({ top: offset.top + 340, left: offset.left + 159 });
+    newPoo.offset(offset);
     $('body').prepend(newPoo);
 }
