@@ -1,5 +1,5 @@
 <?php
 
-    `git pull --recurse-submodules`
+    `git submodule update; git pull --recurse-submodules`
 
 ?>
