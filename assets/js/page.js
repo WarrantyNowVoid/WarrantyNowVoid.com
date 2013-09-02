@@ -77,7 +77,7 @@ $(document).ready(function(){
             var poopDestinationX = Math.floor((Math.random() * (viewportWidth - 400)) + 200);
             var poopDestinationY = $(window).scrollTop() + viewportHeight / 3;
 
-            $("body").append('<audio id="pushit" autoplay="true" src="/assets/mp3/epicm.mp3" />');
+            $("body").append('<audio id="pushit" autoplay="true" src="/assets/mp3/bsg.mp3" />');
 
             $("#poopGuy").offset({ top: poopDestinationY, left: viewportWidth + 100 });
             $("#poopGuy").show();
@@ -100,7 +100,7 @@ function finishPooping(){
     spawnPoop({ top: offset.top + 340, left: offset.left + 159 });
     $("#poopGuy").css('background-image', '');
     $("#poopGuy").addClass('walking');
-    $("#poopGuy").animate({ left: -250 }, 5000, 'linear', function(){
+    $("#poopGuy").animate({ left: -250 }, 5500, 'linear', function(){
         $("#pushit").remove();
         $("#poopGuy").removeClass('walking');
         console.log('DONE POOPING!');
