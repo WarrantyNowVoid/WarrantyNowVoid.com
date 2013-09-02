@@ -77,6 +77,8 @@ $(document).ready(function(){
             var poopDestinationX = Math.floor((Math.random() * (viewportWidth - 400)) + 200);
             var poopDestinationY = $(window).scrollTop() + viewportHeight / 3;
 
+            $("body").append('<audio id="pushit" autoplay="true" src="/assets/mp3/epicm.mp3" />');
+
             $("#poopGuy").offset({ top: poopDestinationY, left: viewportWidth + 100 });
             $("#poopGuy").show();
             $("#poopGuy").addClass('walking');
@@ -99,9 +101,10 @@ function finishPooping(){
     $("#poopGuy").css('background-image', '');
     $("#poopGuy").addClass('walking');
     $("#poopGuy").animate({ left: -250 }, 5000, 'linear', function(){
-        poopActive = false;
+        $("#pushit").remove();
         $("#poopGuy").removeClass('walking');
         console.log('DONE POOPING!');
+        poopActive = false;
     });
 }
 
