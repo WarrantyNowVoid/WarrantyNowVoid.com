@@ -184,6 +184,10 @@ ul#thenavbar li.searchbox input{
     height: 100%;
 }
 
+#postgrid.pushup{
+    margin-top: -30px;
+}
+
 #postgrid .post-preview{
     float: left;
     width: 420px;
@@ -526,6 +530,10 @@ ul#social-links li{
 
 ul#social-links li img{
     display: block;
+}
+
+.debold{
+    font-weight: normal;
 }
 
 /* standard colors for post types */
