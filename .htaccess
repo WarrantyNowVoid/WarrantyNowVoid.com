@@ -1,4 +1,11 @@
+Options -MultiViews
+
 <Files .git/*>
     order allow,deny
     deny from all
 </Files>
+
+RewriteEngine On
+
+RewriteRule ^post/([a-z0-9-]+)/?$ post.php?postid=$1 [NC]
+RewriteRule ^post/([a-z0-9-]+)/[A-z0-9-]+/?$ post.php?postid=$1 [NC]

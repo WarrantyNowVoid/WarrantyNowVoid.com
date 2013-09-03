@@ -264,6 +264,10 @@ article.fixed-width img.content{
     width: 100%;
 }
 
+article .madmen{
+    display: none;
+}
+
 article.fixed-width .madmen{
     display: block;
     width: 728px;
@@ -666,6 +670,10 @@ ul#social-links li img{
     article.fixed-width{
         width: 800px;
         margin-left: 0px;
+    }
+
+    article .madmen{
+        display: none;
     }
 
     article.fixed-width .madmen{
