@@ -8,7 +8,10 @@
             throw new MissingTagException();
         }
 
-        $posts = $JACKED->Syrup->Blag->find(array('AND' => array('Curator.canonicalName' => trim($_GET['tagname']), 'alive' => 1)));
+        $posts = $JACKED->Syrup->Blag->find(
+            array('AND' => array('Curator.canonicalName' => trim($_GET['tagname']), 'alive' => 1)),
+            array('field' => 'posted', 'direction' => 'DESC')
+        );
         $mainTag = $JACKED->Syrup->Curator->findOne(array('canonicalName' => trim($_GET['tagname'])));
 
         if(!$posts){
