@@ -50,7 +50,7 @@
                     <div class="tags">
                         <?php
                             foreach($post->Curator as $tag){
-                                echo '<span class="label label-tag ' . $templateVars['contentType'] . '"><a href="/tag/' . $tag->name . '"><i class="icon-tag"></i> ' . $tag->name . '</a></span>' . "\n";
+                                echo '<span class="label label-tag ' . $templateVars['contentType'] . '"><a href="/tag/' . $tag->canonicalName . '"><i class="icon-tag"></i> ' . $tag->name . '</a></span>' . "\n";
                             }
                         ?>
                     </div>
