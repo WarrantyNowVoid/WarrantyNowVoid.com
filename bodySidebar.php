@@ -10,7 +10,7 @@
 
                     <ul id="social-links">
                         <li><a href="http://twitter.com/warrantynowvoid" target="_blank"><img src="/assets/img/template/aside_twitter.png" /></a></li>
-                        <li><a href="http://plus.google.com/warrantynowvoid" target="_blank"><img src="/assets/img/template/aside_gplus.png" /></a></li>
+                        <li><a href="https://plus.google.com/101358114440767552212" rel="publisher" target="_blank"><img src="/assets/img/template/aside_gplus.png" /></a></li>
                         <li><a href="http://www.youtube.com/channel/UCzNtkqE8sqdNwxRIAhzI2eg" target="_blank"><img src="/assets/img/template/aside_youtube.png" /></a></li>
                         <li><a href="http://facebook.com/warrantynowvoid" target="_blank"><img src="/assets/img/template/aside_facebook.png" /></a></li>
                     </ul>
