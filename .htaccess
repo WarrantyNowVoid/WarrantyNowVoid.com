@@ -11,3 +11,8 @@ RewriteRule ^post/([a-z0-9-]+)/?$ post.php?postid=$1 [NC]
 RewriteRule ^post/([a-z0-9-]+)/[A-z0-9-]+/?$ post.php?postid=$1 [NC]
 
 RewriteRule ^tag/([a-z0-9-]+)/?$ tag.php?tagname=$1 [NC]
+
+RewriteRule ^videos/?$ category.php?catname=videos [NC]
+RewriteRule ^junk/?$ category.php?catname=junk [NC]
+RewriteRule ^comics/?$ category.php?catname=comics [NC]
+RewriteRule ^articles/?$ category.php?catname=articles [NC]
