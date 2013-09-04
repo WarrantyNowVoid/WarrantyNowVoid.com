@@ -19,7 +19,7 @@
         $templateVars['pageTitle'] = $post->title;
         $templateVars['contentType'] = strtolower($post->category->name);
         $templateVars['postURL'] = $JACKED->config->base_url . 'post/' . $post->guid;
-        $templateVars['postHeadline'] = $post->headline;
+        $templateVars['postHeadline'] = htmlentities($post->headline);
         $templateVars['postDatetime'] = date('c', $post->posted);
         if($templateVars['contentType'] == 'comics' || $templateVars['contentType'] == 'videos'){
             $templateVars['fixedWidth'] = TRUE;
