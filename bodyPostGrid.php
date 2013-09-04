@@ -13,6 +13,8 @@
                                 $srcpos = strpos($postImageTag, 'src="/') + 6;
                                 $quotpos = strpos($postImageTag, '"', $srcpos);
                                 $postImage = '/' . substr($postImageTag, $srcpos, $quotpos - $srcpos);
+                            }else{
+                                $postImage = '/assets/img/template/headliner_default.png';
                             }
                             ?>
                     <div class="post-preview topbar-<?php echo $postType; ?> bottombar-<?php echo $postType; ?>">
@@ -24,15 +26,11 @@
                                 </p>
                                 <p><?php echo $post->headline; ?></p>
                             </div>
-                            <?php
-                                if($tagExists){ 
-                            ?>
+                            
                             <div class="image-preview">
                                 <img src="<?php echo $postImage; ?>" />
                             </div>
-                            <?php
-                                }
-                            ?>
+                            
                         </a>
                     </div>
                     <?php

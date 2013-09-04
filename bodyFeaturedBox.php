@@ -17,7 +17,7 @@
                             $quotpos = strpos($postImageTag, '"', $srcpos);
                             $postImage = '/' . substr($postImageTag, $srcpos, $quotpos - $srcpos);
                         }else{
-                            $postImage = '/assets/ico/favicon_src/wnv_512.png';
+                            $postImage = '/assets/img/template/headliner_default.png';
                         }
                         
                 ?>

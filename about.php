@@ -18,7 +18,7 @@
             <article>
                 <h1>About Warranty Now Void</h1>
 
-                <img class="headliner topbar-system1" src="/menino_full.png" />
+                <img class="headliner topbar-system1" src="/assets/img/template/headliner_default.png" />
 
                 <p>We like to make you feel uncomfortable. Stupid.</p>
 

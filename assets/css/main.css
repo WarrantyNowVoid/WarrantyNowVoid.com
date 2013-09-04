@@ -130,9 +130,9 @@ ul#thenavbar li.searchbox input{
 }
 #featuredbox .item .image-preview img{
     margin: 0px;
-    margin-left: -25%;
+    margin-left: -40%;
+    margin-top: -40%;
     max-width: none;
-    height: 310px;
 }
 
 #featuredbox .item .content-preview{
@@ -209,6 +209,7 @@ ul#thenavbar li.searchbox input{
 #postgrid .image-preview{
     overflow: hidden;
     width: 100%;
+    max-height: 250px;
 }
 
 #postgrid .image-preview img{
@@ -705,12 +706,12 @@ ul#social-links li img{
 
     #featuredbox .item .image-preview{
         width: 500px;
-        height: 330px;
+        height: 100%;
     }
 
     #featuredbox .item .image-preview img{
-        height: 330px;
-        margin-left: 0px;
+        margin-left: -20%;
+        margin-top: -17%;
     }
 
 
