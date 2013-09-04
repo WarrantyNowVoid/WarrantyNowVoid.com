@@ -16,3 +16,5 @@ RewriteRule ^videos/?$ category.php?catname=videos [NC]
 RewriteRule ^junk/?$ category.php?catname=junk [NC]
 RewriteRule ^comics/?$ category.php?catname=comics [NC]
 RewriteRule ^articles/?$ category.php?catname=articles [NC]
+
+RewriteRule ^about/?$ about.php [NC]
