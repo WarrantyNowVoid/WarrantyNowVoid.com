@@ -25,10 +25,15 @@
             $templateVars['fixedWidth'] = TRUE;
         }
         //find the post image
-        $templateVars['postImage'] = strstr($post->content, '/>', TRUE) . '/>';
-        $srcpos = strpos($templateVars['postImage'], 'src="/') + 6;
-        $quotpos = strpos($templateVars['postImage'], '"', $srcpos);
-        $templateVars['postImageURL'] = $JACKED->config->base_url . substr($templateVars['postImage'], $srcpos, $quotpos - $srcpos);
+        $tagExists = strpos($post->content, '<img class="headliner ');
+        if(!($tagExists === FALSE)){
+            $templateVars['postImage'] = strstr($post->content, '/>', TRUE) . '/>';
+            $srcpos = strpos($templateVars['postImage'], 'src="/') + 6;
+            $quotpos = strpos($templateVars['postImage'], '"', $srcpos);
+            $templateVars['postImageURL'] = $JACKED->config->base_url . substr($templateVars['postImage'], $srcpos, $quotpos - $srcpos);
+        }else{
+            $templateVars['postImageURL'] = $JACKED->config->base_url . 'assets/ico/favicon_src/wnv_512.png';
+        }
 
 
         include('bodyTop.php');

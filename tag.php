@@ -28,15 +28,14 @@
                     <?php
                         foreach($posts as $post){ 
                             $postType = strtolower($post->category->name);
+                            
                             //find the post image
-                            $tagStart = strstr($post->content, '/>', TRUE);
-                            if($tagStart){
-                                $postImageTag = $tagStart . '/>';
+                            $tagExists = !(strpos($post->content, '<img class="headliner ') === FALSE);
+                            if($tagExists){
+                                $postImageTag = strstr($post->content, '/>', TRUE) . '/>';
                                 $srcpos = strpos($postImageTag, 'src="/') + 6;
                                 $quotpos = strpos($postImageTag, '"', $srcpos);
                                 $postImage = '/' . substr($postImageTag, $srcpos, $quotpos - $srcpos);
-                            }else{
-                                $postImageTag = FALSE;
                             }
                             ?>
                     <div class="post-preview topbar-<?php echo $postType; ?> bottombar-<?php echo $postType; ?>">
@@ -48,8 +47,11 @@
                                 </p>
                                 <p><?php echo $post->headline; ?></p>
                             </div>
+                            <div class="image-preview">
+                                <img src="<?php echo $postImage; ?>" />
+                            </div>
                             <?php
-                                if($postImageTag){ 
+                                if($tagExists){ 
                             ?>
                             <div class="image-preview">
                                 <img src="<?php echo $postImage; ?>" />
