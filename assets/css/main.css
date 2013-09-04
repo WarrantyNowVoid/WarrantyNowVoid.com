@@ -201,6 +201,7 @@ ul#thenavbar li.searchbox input{
 
 #postgrid .content-preview{
     color: #fff;
+    height: 200px;
     background-color: #333;
     padding: 10px;
     font-weight: 300;
