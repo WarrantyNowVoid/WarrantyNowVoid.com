@@ -13,6 +13,10 @@
             throw new Exception("No posts found");
         }
 
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = '';
+        $templateVars['postGrid']['title'] = 'RECENT POSTS';
+
         include('bodyTop.php');
 ?>
             
@@ -87,64 +91,9 @@
                     </div>
                 </div>
 
-                <?php include('bodySidebar.php'); ?>
-
-            </div> 
-            <div id="postgrid">
-                <div class="container"><!-- other...main container?-->
-                    <h3 class="debold">RECENT POSTS</h3>
-                    <?php
-                        foreach($posts as $post){ 
-                            $postType = strtolower($post->category->name);
-                            
-                            //find the post image
-                            $tagExists = !(strpos($post->content, '<img class="headliner ') === FALSE);
-                            if($tagExists){
-                                $postImageTag = strstr($post->content, '/>', TRUE) . '/>';
-                                $srcpos = strpos($postImageTag, 'src="/') + 6;
-                                $quotpos = strpos($postImageTag, '"', $srcpos);
-                                $postImage = '/' . substr($postImageTag, $srcpos, $quotpos - $srcpos);
-                            }
-                            ?>
-                    <div class="post-preview topbar-<?php echo $postType; ?> bottombar-<?php echo $postType; ?>">
-                        <a href="/post/<?php echo $post->guid; ?>">
-                            <div class="content-preview">
-                                <h3><?php echo $post->title; ?></h3>
-                                <p class="byline">
-                                    <span class="label <?php echo $postType; ?>"><?php echo $postType; ?></span> <span class="datestamp"><?php echo date("F j, Y", $post->posted); ?></span>
-                                </p>
-                                <p><?php echo $post->headline; ?></p>
-                            </div>
-                            <?php
-                                if($tagExists){ 
-                            ?>
-                            <div class="image-preview">
-                                <img src="<?php echo $postImage; ?>" />
-                            </div>
-                            <?php
-                                }
-                            ?>
-                        </a>
-                    </div>
-                    <?php
-                        }
-                    ?>
-                    <div class="clearfix"></div>
-
-                    <!--pagination
-                    <ul class="pager pull-right">
-                      <li class="disabled">
-                        <a href="#">&larr; Newer</a>
-                      </li>
-                      <li>
-                        <a href="#">Older &rarr;</a>
-                      </li>
-                    </ul>-->
-
-                </div><!--/main container2-->
-            
-
 <?php
+        include('bodySidebar.php');
+        include('bodyPostGrid.php');
 
     }catch(Exception $e){
         require('bodyTop.php');

@@ -19,67 +19,12 @@
         }
 
         $templateVars['pageTitle'] = "Tag: " . $mainTag->name;
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = 'pushup';
+        $templateVars['postGrid']['title'] = '<em><strong>' . $mainTag->usage . '</strong></em> POSTS TAGGED WITH "<strong>' . $mainTag->name . '</strong>';
+
         include('bodyTop.php');
-?>
-            </div> <!-- kill the main container, we have our own here -->
-            <div id="postgrid" class="pushup">
-                <div class="container"><!-- other...main container?-->
-                    <h3 class="debold"><em><strong><?php echo $mainTag->usage; ?></strong></em> POSTS TAGGED WITH "<strong><?php echo $mainTag->name; ?></strong>"</h3>
-                    <?php
-                        foreach($posts as $post){ 
-                            $postType = strtolower($post->category->name);
-                            
-                            //find the post image
-                            $tagExists = !(strpos($post->content, '<img class="headliner ') === FALSE);
-                            if($tagExists){
-                                $postImageTag = strstr($post->content, '/>', TRUE) . '/>';
-                                $srcpos = strpos($postImageTag, 'src="/') + 6;
-                                $quotpos = strpos($postImageTag, '"', $srcpos);
-                                $postImage = '/' . substr($postImageTag, $srcpos, $quotpos - $srcpos);
-                            }
-                            ?>
-                    <div class="post-preview topbar-<?php echo $postType; ?> bottombar-<?php echo $postType; ?>">
-                        <a href="/post/<?php echo $post->guid; ?>">
-                            <div class="content-preview">
-                                <h3><?php echo $post->title; ?></h3>
-                                <p class="byline">
-                                    <span class="label <?php echo $postType; ?>"><?php echo $postType; ?></span> <span class="datestamp"><?php echo date("F j, Y", $post->posted); ?></span>
-                                </p>
-                                <p><?php echo $post->headline; ?></p>
-                            </div>
-                            <div class="image-preview">
-                                <img src="<?php echo $postImage; ?>" />
-                            </div>
-                            <?php
-                                if($tagExists){ 
-                            ?>
-                            <div class="image-preview">
-                                <img src="<?php echo $postImage; ?>" />
-                            </div>
-                            <?php
-                                }
-                            ?>
-                        </a>
-                    </div>
-                    <?php
-                        }
-                    ?>
-                    <div class="clearfix"></div>
-
-                    <!--pagination
-                    <ul class="pager pull-right">
-                      <li class="disabled">
-                        <a href="#">&larr; Newer</a>
-                      </li>
-                      <li>
-                        <a href="#">Older &rarr;</a>
-                      </li>
-                    </ul>-->
-
-                </div><!--/main container2-->
-            
-
-<?php
+        include('bodyPostGrid.php');
 
     }catch(MissingTagException $e){
         require('bodyTop.php');
