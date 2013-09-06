@@ -55,6 +55,12 @@ $(document).ready(function(){
         });
     }
 
+    //make the footer positioning smarter
+    if($('#wrap').height() <= $(window).height()){
+        $('.container-main').height() <= $(window).height()
+        $('footer').css({'margin-top': '-70px'});
+    }
+
     //featured box
     $('div#featuredbox ul.titletabs li').click(function(eo){
         switchToFeature($(this).attr('data-itemid'))
