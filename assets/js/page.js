@@ -80,7 +80,7 @@ $(document).ready(function(){
             var viewportWidth = $(window).width();
             var viewportHeight = $(window).height();
 
-            var poopDestinationX = Math.floor((Math.random() * (viewportWidth - 400)) + 200);
+            var poopDestinationX = Math.floor((Math.random() * (viewportWidth - 400)) + 100);
             var poopDestinationY = $(window).scrollTop() + viewportHeight / 3;
 
             $("audio#pushit").get(0).currentTime = 0;
