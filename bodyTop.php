@@ -68,7 +68,9 @@
                                     <a href="/about">About</a>
                                 </li>
                                 <li class="searchbox">
-                                    <input type="search" />
+                                    <form method="GET" action="/search">
+                                        <input type="search" id="wnv-search" name="q" />
+                                    </form>
                                 </li>
                             </ul>
                         </nav>
