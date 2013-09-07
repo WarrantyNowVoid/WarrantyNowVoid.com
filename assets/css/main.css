@@ -99,6 +99,7 @@ ul#thenavbar li.searchbox input{
 }
 
 #featuredbox .item{
+    z-index: 1;
     opacity: 0;
     color: #fff;
     height: 310px;
@@ -109,6 +110,7 @@ ul#thenavbar li.searchbox input{
 
 #featuredbox .item.active{
     opacity: 1.0;
+    z-index: 2;
 }
 
 #featuredbox .item a{
