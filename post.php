@@ -2,7 +2,7 @@
 
     try{
         require('JACKED/jacked_conf.php');
-        $JACKED = new JACKED('Syrup');
+        $JACKED = new JACKED(array('Syrup', 'admin'));
 
         if(!(isset($_GET['postid']) && is_string($_GET['postid']))){
             throw new MissingPostIDException();
@@ -13,6 +13,12 @@
         $post = $JACKED->Syrup->Blag->findOne(array('guid' => $templateVars['postid']));
         if(!$post){
             throw new InvalidPostIDException($templateVars['postid']);
+        }
+
+        if(!$post->alive){
+            if(!$JACKED->admin->checkLogin()){
+                throw new InvalidPostIDException($templateVars['postid']);
+            }
         }
 
         $templateVars['pageType'] = 'post';
