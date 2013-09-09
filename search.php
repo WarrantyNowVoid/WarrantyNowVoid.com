@@ -25,15 +25,15 @@
         // $tag_posts = $JACKED->Syrup->Blag->find($tagCriteria);
 
         $query = "SELECT Blag.guid, MATCH(Curator.name) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE) AS Score 
-            FROM Blag, Curator, CuratorRelation WHERE MATCH(Curator.name) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE) AND CuratorRelation.Curator = Curator.guid AND Blag.guid = CuratorRelation.target";
+            FROM Blag, Curator, CuratorRelation WHERE MATCH(Curator.name) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE) AND CuratorRelation.Curator = Curator.guid AND Blag.guid = CuratorRelation.target AND Blag.alive = 1";
         $tagScores = $JACKED->MySQL->query($query);
 
         $query = "SELECT guid, MATCH(title) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE) AS Score 
-            FROM Blag WHERE MATCH(title) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE)";
+            FROM Blag WHERE MATCH(title) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE) AND alive = 1";
         $titleScores = $JACKED->MySQL->query($query);
 
         $query = "SELECT guid, MATCH(content) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE) AS Score 
-            FROM Blag WHERE MATCH(content) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE)";
+            FROM Blag WHERE MATCH(content) AGAINST ('" . implode(' ', $fulltextTerms) . "' IN BOOLEAN MODE) AND alive = 1";
         $contentScores = $JACKED->MySQL->query($query);
 
         $guidScores = array();
