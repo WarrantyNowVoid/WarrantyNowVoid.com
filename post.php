@@ -85,7 +85,7 @@
                         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                         var disqus_shortname = 'warrantynowvoid'; // required: replace example with your forum shortname
                         var disqus_identifier = 'wnv.staging.<?php echo $post->guid; ?>';
-                        var disqus_title = '<?php echo $post->title; ?>';
+                        var disqus_title = "<?php echo $post->title; ?>";
                         var disqus_url = '<?php echo $templateVars['postURL']; ?>';
 
                         /* * * DON'T EDIT BELOW THIS LINE * * */
