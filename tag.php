@@ -21,7 +21,7 @@
         $templateVars['pageTitle'] = "Tag: " . $mainTag->name;
         $templateVars['postGrid'] = array();
         $templateVars['postGrid']['class'] = 'pushup';
-        $templateVars['postGrid']['title'] = '<em><strong>' . $mainTag->usage . '</strong></em> POSTS TAGGED WITH "<strong>' . $mainTag->name . '</strong>"';
+        $templateVars['postGrid']['title'] = '<em><strong>' . count($posts) . '</strong></em> POSTS TAGGED WITH "<strong>' . $mainTag->name . '</strong>"';
 
         include('bodyTop.php');
         include('bodyPostGrid.php');
