@@ -52,6 +52,11 @@
                 <h1><?php echo $post->title; ?></h1>
                 <p class="byline">
                     <span class="label <?php echo $templateVars['contentType']; ?>"><?php echo $templateVars['contentType']; ?></span> <span class="datestamp"><?php echo date("F j, Y", $post->posted); ?></span>
+                    <?php
+                        if(!$post->alive){
+                            echo '<span class="label label-danger"><i class="icon-eye-open"></i> DRAFT PREVIEW</span>';
+                        }
+                    ?>
                 </p>
 
                 <?php echo $post->content; ?>
