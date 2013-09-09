@@ -39,6 +39,17 @@ function switchToFeature(itemid){
     $('div#featuredbox ul.titletabs li.active').removeClass('active');
     $('div#featuredbox ul.titletabs li[data-itemid=' + itemid + ']').addClass('active');
 }
+
+function walkenize(){
+    if($('#walkenize-button').length > 0){
+        $('#walkenize-button').hide();
+        $(document).snowfall('clear');
+        $(document).snowfall({image :"/assets/img/template/walken_flake.png", minSize: 10, maxSize:69});
+        $("body").append('<audio id="walkenmp3"><source src="/assets/mp3/winterwonderland.mp3" type="audio/mpeg" /></audio>');
+        $("audio#walkenmp3").trigger("play");
+    }
+}
+
 var intervalID = window.setInterval(nextFeature, 10000);
 
 var poopActive = false;
@@ -61,6 +72,15 @@ $(document).ready(function(){
         window.clearInterval(intervalID);
         intervalID = window.setInterval(nextFeature, 10000);
     });
+
+    //snowfall plugin
+    if($('#walkenize-button').length > 0){
+        yepnope.injectJs('/assets/js/snowfall.jquery.js', function(){
+            var snowfallTimer = window.setTimeout(function(){
+                    $(document).snowfall({maxSpeed : 10, shadow: true});
+            }, 3000);
+        });
+    }
 
     // poop button
     $('#poopButton').click(function(eo){
