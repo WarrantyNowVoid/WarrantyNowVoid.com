@@ -394,6 +394,11 @@ aside .related h3{
     text-transform: uppercase;
 }
 
+aside ul#social-links li img{
+    width: 74px;
+    height: 73px;
+}
+
 aside #related-posts{
     list-style-type: none;
     margin: 0px;
