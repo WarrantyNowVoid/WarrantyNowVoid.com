@@ -19,8 +19,8 @@
 
         $templateVars['featuredBox'] = array();
         $templateVars['featuredBox']['posts'] = array(
-            1 => '031a4',
-            2 => '8024a',
+            1 => 'cdb56',
+            2 => 'fc89c',
             3 => '832a3',
             4 => '43f17'
         );
