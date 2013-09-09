@@ -2,7 +2,7 @@
 
     try{
         require('JACKED/jacked_conf.php');
-        $JACKED = new JACKED(array('Syrup', 'admin'));
+        $JACKED = new JACKED(array('Syrup', 'admin', 'MySQL'));
 
         if(!(isset($_GET['postid']) && is_string($_GET['postid']))){
             throw new MissingPostIDException();
@@ -59,7 +59,39 @@
                     ?>
                 </p>
 
-                <?php echo $post->content; ?>
+                <?php 
+                    echo $post->content; 
+
+                    if($templateVars['contentType'] == 'comics'){
+                        $queryStart = "SELECT Blag.guid FROM Blag, BlagCategory WHERE BlagCategory.name = 'Comics' AND Blag.category = BlagCategory.guid AND Blag.alive = 1 ";
+
+                        $queryLast = $queryStart . "ORDER BY Blag.posted DESC LIMIT 1";
+                        $lastResult = $JACKED->MySQL->query($queryLast);
+                        $lastid = $lastResult[0]['guid']? $lastResult[0]['guid'] : $post->guid;
+
+                        $queryNext = $queryStart . "AND Blag.posted > " . $post->posted . " ORDER BY Blag.posted ASC LIMIT 1";
+                        $nextResult = $JACKED->MySQL->query($queryNext);
+                        $nextid = $nextResult[0]['guid']? $nextResult[0]['guid'] : $post->guid;
+
+                        $queryPrev = $queryStart . "AND Blag.posted < " . $post->posted . " ORDER BY Blag.posted DESC LIMIT 1";
+                        $prevResult = $JACKED->MySQL->query($queryPrev);
+                        $previd = $prevResult[0]['guid']? $prevResult[0]['guid'] : $post->guid;
+
+                        $queryFirst = $queryStart . "ORDER BY Blag.posted ASC LIMIT 1";
+                        $firstResult = $JACKED->MySQL->query($queryFirst);
+                        $firstid = $firstResult[0]['guid']? $firstResult[0]['guid'] : $post->guid;
+
+                        echo '
+                        <ul id="comic-controls">
+                            <li class="system1"><a href="/post/' . $previd . '"><i class="icon-backward icon-white"></i> Previous</a></li>
+                            <li class="system1"><a href="/post/' . $firstid . '"><i class="icon-fast-backward icon-white"></i> First</a></li>
+                            <li class="system1"><a href="/post/' . $lastid . '">Last <i class="icon-fast-forward icon-white"></i></a></li>
+                            <li class="system1"><a href="/post/' . $nextid . '">Next <i class="icon-forward icon-white"></i></a></li>
+                        </ul>';
+                    }
+                ?>
+
+                <div class="clearfix"></div>
 
                 <div id="post-post">
                     <div class="tags">
