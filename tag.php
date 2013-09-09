@@ -23,18 +23,20 @@
         $templateVars['postGrid']['class'] = 'pushup';
         $templateVars['postGrid']['title'] = '<em><strong>' . count($posts) . '</strong></em> POSTS TAGGED WITH "<strong>' . $mainTag->name . '</strong>"';
 
-        include('bodyTop.php');
-        include('bodyPostGrid.php');
-
     }catch(MissingTagException $e){
-        require('bodyTop.php');
-        echo '<h3>No tag given.</h3>';
+        $posts = array();
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = 'pushup';
+        $templateVars['postGrid']['title'] = '<em>NO TAG PROVIDED</strong>';
     }catch(Exception $e){
-        require('bodyTop.php');
-        echo '<h3>No posts found.</h3>';
-        echo '<pre><code>' . $e->getMessage() . '</code></pre>';
+        $posts = array();
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = 'pushup';
+        $templateVars['postGrid']['title'] = '<em><strong>0</strong></em> POSTS TAGGED WITH "<strong>' . $_GET['tagname'] . '</strong>"';
     }
 
+    require('bodyTop.php');
+    require('bodyPostGrid.php');
     require('bodyBottom.php');
 
 

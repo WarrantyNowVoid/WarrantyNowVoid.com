@@ -35,7 +35,6 @@
             $templateVars['postImageURL'] = $JACKED->config->base_url . 'assets/ico/favicon_src/wnv_512.png';
         }
 
-
         include('bodyTop.php');
 ?>
 
@@ -96,19 +95,22 @@
 
         
     }catch(InvalidPostIDException $ie){
-        $templateVars['error'] = TRUE;
+        $templateVars['error'] = array();
+        $templateVars['error']['message'] = 'INVALID POST ID';
         include('bodyTop.php');
         include('bodyError.php');
     }catch(MissingPostIDException $ie){
-        $templateVars['error'] = TRUE;
+        $templateVars['error'] = array();
+        $templateVars['error']['message'] = 'NO POST ID PROVIDED';
         include('bodyTop.php');
         include('bodyError.php');
     }catch(Exception $e){
-        $templateVars['error'] = TRUE;
+        $templateVars['error'] = array();
+        $templateVars['error']['message'] = 'SERVER ERROR: ' . $e->getMessage();
         include('bodyTop.php');
         include('bodyError.php');
     }
-
+    
     require('bodySidebar.php');
     require('bodyBottom.php');
 

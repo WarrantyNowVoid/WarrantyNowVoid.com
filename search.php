@@ -78,17 +78,22 @@
         $templateVars['postGrid']['class'] = 'pushup';
         $templateVars['postGrid']['title'] = '<em><strong>' . count($posts) . '</strong></em> RESULT' . ((count($posts) == 1)? '' : 'S') . ' FOR "<strong>' . $q . '</strong>"';
 
-        include('bodyTop.php');
-        include('bodyPostGrid.php');
-
     }catch(MissingQueryException $e){
-        require_once('bodyTop.php');
-        echo '<h3>No search terms provided.</h3>';
+        $posts = array();
+        $templateVars['pageTitle'] = "Search";
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = 'pushup';
+        $templateVars['postGrid']['title'] = '<em>NO SEARCH TERMS PROVIDED</strong>';
     }catch(Exception $e){
-        require_once('bodyTop.php');
-        echo '<h3>No posts found.</h3>';
-        echo '<pre><code>' . $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() . '</code></pre>';
+        $posts = array();
+        $templateVars['pageTitle'] = "Search: " . $q;
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = 'pushup';
+        $templateVars['postGrid']['title'] = '<em><strong>0</strong></em> RESULTS FOR "<strong>' . $q . '</strong>"';
     }
+
+    require('bodyTop.php');
+    require('bodyPostGrid.php');
 
     require('bodyBottom.php');
 

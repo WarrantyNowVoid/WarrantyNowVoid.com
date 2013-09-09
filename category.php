@@ -26,18 +26,21 @@
         $templateVars['postGrid']['class'] = 'pushup';
         $templateVars['postGrid']['title'] = '<em><strong>' . count($posts) . '</strong></em> ' . strtoupper($category->name);
         
-        include('bodyTop.php');
-        include('bodyPostGrid.php');
 
     }catch(MissingCategoryException $e){
-        require('bodyTop.php');
-        echo '<h3>No category given.</h3>';
+        $posts = array();
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = 'pushup';
+        $templateVars['postGrid']['title'] = '<em>NO CATEGORY GIVEN</em>';
     }catch(Exception $e){
-        require('bodyTop.php');
-        echo '<h3>No posts found.</h3>';
-        echo '<pre><code>' . $e->getMessage() . ' (' . $e->getLine() . ')</code></pre>';
+        $posts = array();
+        $templateVars['postGrid'] = array();
+        $templateVars['postGrid']['class'] = 'pushup';
+        $templateVars['postGrid']['title'] = '<em><strong>0</strong></em> POSTS IN CATEGORY: "<strong>' . $_GET['catname'] . '</strong>"';
     }
 
+    require('bodyTop.php');
+    require('bodyPostGrid.php');
     require('bodyBottom.php');
 
 

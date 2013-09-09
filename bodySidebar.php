@@ -18,7 +18,7 @@
 
                     <?php
                         //related posts! 
-                        if($templateVars['pageType']  == 'post' && !isset($templateVars['error'])){ 
+                        if($templateVars['pageType']  == 'post' && !(isset($templateVars['error']) && $templateVars['error'])){ 
                             $relatedIDs = array();
                             foreach($post->Curator as $tag){
                                 $rels = $JACKED->Syrup->CuratorRelation->find(array('Curator' => $tag->guid));
