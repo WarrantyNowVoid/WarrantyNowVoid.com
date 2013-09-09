@@ -3,6 +3,7 @@
                 <div class="container"><!-- other...main container?-->
                     <h3 class="debold"><?php echo $templateVars['postGrid']['title']; ?></h3>
                     <?php
+                        $counter = 1;
                         foreach($posts as $post){ 
                             $postType = strtolower($post->category->name);
                             
@@ -34,6 +35,10 @@
                         </a>
                     </div>
                     <?php
+                            $counter++;
+                            if($counter&1){
+                                echo '<div class="clearfix"></div>';
+                            }
                         }
                     ?>
                     <div class="clearfix"></div>
