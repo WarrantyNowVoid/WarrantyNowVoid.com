@@ -67,6 +67,17 @@
         }
 
         arsort($guidScores);
+        $totalResultCount = count($guidScores);
+
+        $postCount = 20;
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+        }else{
+            $page = 1;
+        }
+
+        $guidScores = array_slice($guidScores, ($postCount * $page) - $postCount, $postCount, TRUE);
+
 
         $posts = array();
         foreach($guidScores as $guid => $score){
@@ -76,7 +87,16 @@
         $templateVars['pageTitle'] = "Search: " . $q;
         $templateVars['postGrid'] = array();
         $templateVars['postGrid']['class'] = 'pushup';
-        $templateVars['postGrid']['title'] = '<em><strong>' . count($posts) . '</strong></em> RESULT' . ((count($posts) == 1)? '' : 'S') . ' FOR "<strong>' . $q . '</strong>"';
+        $templateVars['postGrid']['title'] = '<em><strong>' . $totalResultCount . '</strong></em> RESULT' . (($totalResultCount == 1)? '' : 'S') . ' FOR "<strong>' . $q . '</strong>"';
+        if($page > 1){
+            $templateVars['postGrid']['title'] .= ' <em><small>PAGE ' . $page . '</small></em>';
+        }
+
+        $templateVars['pager'] = array();
+        $templateVars['pager']['pageNum'] = $page;
+        $templateVars['pager']['hasNext'] = ($totalResultCount > ($postCount * $page));
+        $templateVars['pager']['nextPageLink'] = '/search?q=' . $_GET['q'] . '&page=' . ($page + 1);
+        $templateVars['pager']['prevPageLink'] = '/search?q=' . $_GET['q'] . '&page=' . ($page - 1);
 
     }catch(MissingQueryException $e){
         $posts = array();

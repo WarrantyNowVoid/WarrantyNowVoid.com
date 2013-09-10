@@ -8,9 +8,23 @@
             throw new MissingTagException();
         }
 
-        $posts = $JACKED->Syrup->Blag->find(
+        $postCount = 20;
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+        }else{
+            $page = 1;
+        }
+
+        $totalResultCount = count($JACKED->Syrup->Blag->find(
             array('AND' => array('Curator.canonicalName' => trim($_GET['tagname']), 'alive' => 1)),
             array('field' => 'posted', 'direction' => 'DESC')
+        ));
+
+        $posts = $JACKED->Syrup->Blag->find(
+            array('AND' => array('Curator.canonicalName' => trim($_GET['tagname']), 'alive' => 1)),
+            array('field' => 'posted', 'direction' => 'DESC'),
+            $postCount,
+            (($postCount * $page) - $postCount)
         );
         $mainTag = $JACKED->Syrup->Curator->findOne(array('canonicalName' => trim($_GET['tagname'])));
 
@@ -21,7 +35,16 @@
         $templateVars['pageTitle'] = "Tag: " . $mainTag->name;
         $templateVars['postGrid'] = array();
         $templateVars['postGrid']['class'] = 'pushup';
-        $templateVars['postGrid']['title'] = '<em><strong>' . count($posts) . '</strong></em> POSTS TAGGED WITH "<strong>' . $mainTag->name . '</strong>"';
+        $templateVars['postGrid']['title'] = '<em><strong>' . $totalResultCount . '</strong></em> POSTS TAGGED WITH "<strong>' . $mainTag->name . '</strong>"';
+        if($page > 1){
+            $templateVars['postGrid']['title'] .= ' <em><small>PAGE ' . $page . '</small></em>';
+        }
+
+        $templateVars['pager'] = array();
+        $templateVars['pager']['pageNum'] = $page;
+        $templateVars['pager']['hasNext'] = ($totalResultCount > ($postCount * $page));
+        $templateVars['pager']['nextPageLink'] = '/tag/' . $_GET['tagname'] . '/' . ($page + 1);
+        $templateVars['pager']['prevPageLink'] = '/tag/' . $_GET['tagname'] . '/' . ($page - 1);
 
     }catch(MissingTagException $e){
         $posts = array();

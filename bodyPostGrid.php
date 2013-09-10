@@ -43,15 +43,35 @@
                     ?>
                     <div class="clearfix"></div>
 
-                    <!--pagination
-                    <ul class="pager pull-right">
-                      <li class="disabled">
-                        <a href="#">&larr; Newer</a>
-                      </li>
-                      <li>
-                        <a href="#">Older &rarr;</a>
-                      </li>
-                    </ul>-->
+                    <?php 
+                    if(isset($templateVars['pager'])){
+                        echo '
+                        <ul class="pager pull-right">';
+                        if($templateVars['pager']['pageNum'] == 1){
+                            echo'
+                            <li class="disabled">
+                                <a>&larr; Newer</a>';
+                        }else{
+                            echo '
+                            <li>    
+                                <a href="' . $templateVars['pager']['prevPageLink'] . '">&larr; Newer</a>';
+                        }
+                        echo '
+                            </li>';
+                        if(!$templateVars['pager']['hasNext']){
+                            echo '
+                            <li class="disabled">
+                                <a>Older &rarr;</a>';
+                        }else{
+                            echo '
+                            <li>
+                                <a href="' . $templateVars['pager']['nextPageLink'] . '">Older &rarr;</a>';
+                        }
+                        echo '
+                            </li>
+                        </ul>';
+                    }
+                    ?>
 
                 </div><!--/main container2-->
                 <!--/postgrid is taken over by main template's /container-->
