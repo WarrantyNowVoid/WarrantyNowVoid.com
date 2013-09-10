@@ -29,3 +29,5 @@ RewriteRule ^articles/?$ category.php?catname=articles [NC]
 RewriteRule ^about/?$ about.php [NC]
 
 RewriteRule ^search/?$ search.php [NC,QSA]
+
+RewriteRule ^advertising/?$ advertising.php [NC]
