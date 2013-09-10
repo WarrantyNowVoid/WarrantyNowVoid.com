@@ -22,7 +22,7 @@
 
                 <p>Warranty Now Void, historically speaking, is a project that was first started as a webcomic in 2006. Then it died. Then, miraculously, it undied. Unfortunately, it was shortly thereafter involved in an implosive MySQL coat-hanger-abortion that once again laid it to rest. After that, it was revived as a site dedicated to videos for a while, but that was a lot of work and we hated being confined to just one media format. That brings us to now: the new era. We've revived the site once more as a dumping ground for our psychic excrement in all its many forms. There's <a href="/comics">doodles</a>. There's <a href="/videos">videos</a>. There's <a href="/articles">articles</a>. There's <a onclick="$('#poopButton').click();">a button that makes a naked dude walk out and poop on our website</a>. It's perfect.</p>
 
-                <p>For new visitors to the site, introductions may be in order. The WNV family consists primarily of Nick "Pope" Pettazzoni and Scott Bacon, with a variety of part-time deviants thrown in for flavor (umami, if you're curious.) We're more or less based out of Boston, MA, though I realize that statement wrongly suggests that we have a base. To clarify, we do not. We are all gainfully employed, and this site exists as an outlet for what might be seen as socially abhorrent humor were we to loose it from our mouthslings in a place where people could still see our actual faces. WNV does not yet exist in meatspace as a place one can visit and/or raze as he or she sees fit. </p>
+                <p>For new visitors to the site, introductions may be in order. The WNV family consists primarily of Nick "Pope" Pettazzoni, Scott Bacon, and "Admiral" Nick Rau, with a variety of part-time deviants thrown in for flavor (umami, if you're curious.) We're more or less based out of Boston, MA, though I realize that statement wrongly suggests that we have a base. To clarify, we do not. We are all gainfully employed, and this site exists as an outlet for what might be seen as socially abhorrent humor were we to loose it from our mouthslings in a place where people could still see our actual faces. WNV does not yet exist in meatspace as a place one can visit and/or raze as he or she sees fit. </p>
 
                 <p>Not that we'd be allowed to set up physical shop within Boston city limits after that Circle Jerks video. Boy, was that ill-conceived. </p>
 
@@ -31,6 +31,7 @@
                 <blockquote>General Contact: <a href="mailto:wnv@warrantynowvoid.com">wnv@warrantynowvoid.com</a><br />
                     Pope: <a href="mailto:pope@warrantynowvoid.com">pope@warrantynowvoid.com</a><br />
                     Scott: <a href="mailto:scawt@warrantynowvoid.com">scawt@warrantynowvoid.com</a><br />
+                    The Admiral: <a href="mailto:admiral@warrantynowvoid.com">admiral@warrantynowvoid.com</a><br />
                 </blockquote>
 
                 And whoever else is working on this site, I don't actually know anymore…</p>
