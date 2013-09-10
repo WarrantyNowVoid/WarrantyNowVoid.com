@@ -29,7 +29,7 @@
                 <p>All code and relevant content is licensed under the <a href="/license">DBAD License</a></p>
 
                 <h2>Okay, here's the full version for you to ignore</h2>
-                <h3>Terms of Use</h3>
+                <h2>Terms of Use</h2>
                 <p>By using WarrantyNowVoid.com Web site (the 'Web Site' or 'WarrantyNowVoid.com' or 'WNV'), you are deemed to have agreed to these terms and conditions of use. WNV may change the Terms and Conditions from time to time and at any time, and without actual notice to you. All such changes to these Terms and Conditions will appear on the Web Site. By using this site after we post any changes, you agree to accept those changes, whether or not you have reviewed them. If at any time you choose not to accept these Terms and Conditions of use, your only recourse is to immediately discontinue the use of this site.<br>
                 <br>
                 ALL OF THE POSTS AND ANY OTHER MEDIA/TEXT HEREIN, UNLESS OTHERWISE NOTED, ARE COPYRIGHTED BY Warranty Now Void NO PART OF THIS SITE, OR ANY OF THE CONTENT CONTAINED HEREIN, MAY BE USED OR REPRODUCED IN ANY MANNER WHATSOEVER WITHOUT EXPRESSED PERMISSION OF THE COPYRIGHT HOLDER.
@@ -164,8 +164,40 @@
                 If you have any questions about this policy or our site in general, please contact us at <a href="mailto:wnv@WarrantyNowVoid.com">wnv@WarrantyNowVoid.com.</a><br>
 
                 <br>
-                For all advertising inquiries, please contact <a href="mailto:wnv@WarrantyNowVoid.com">wnv@WarrantyNowVoid.com.</a><br> 
                 </p>
+                
+                <h2>Privacy Policy</h2>
+                <p>Warranty Now Void believes that electronic privacy is crucial for the ongoing success of the Internet as a service, commercial, and entertainment medium. We know you're concerned about protecting your privacy online.</p>
+
+                <p>At Warranty Now Void, we treat your personal information with the highest standards of safety, security, and confidentiality.</p>
+
+                <h3>Information Gathered</h3>
+
+                <p>We don't collect personal information without your knowledge. We don't sell, rent, or give your personal information to unrelated third parties without your prior permission.</p>
+
+                <p>This policy explains what information we collect about you and how we use that information. We also outline the choices you have. </p>
+
+                <h3>Cookies</h3>
+
+                <p>The use of advertising cookies sent by third-party servers is standard in the Internet industry. You may occasionally get cookies from our advertisers. Warranty Now Void cannot and does not control these cookies. </p>
+
+                <he>Traffic Data</h3>
+
+                <p>Each time a visitor comes to a Warranty Now Void site, information is collected to improve the overall quality of Warranty Now Void sites. Warranty Now Void collects the visitor's domain name/IP Address (e.g., whether the user is logged on from cakefarts.com or buttschool.edu or 255.255.255.0), referral data (e.g., we record the address of the last URL a user visited prior to clicking through to an Warranty Now Void site), and browser/platform type (e.g., a Netscape browser on a Macintosh platform).</p>
+
+                <p>In addition to collecting these types of information, Warranty Now Void's advertisement delivery system collects aggregate search terms for internal reporting and targeted advertising. Warranty Now Void's advertisement delivery system collects visitor information for purposes of product monitoring, product improvement, and targeted advertising.</p>
+
+                <p>Warranty Now Void also counts, tracks, and aggregates the visitor's activity into our analysis of general traffic flow at Warranty Now Void sites (e.g., tracking where traffic comes from and how traffic flows within the sites). Warranty Now Void may merge this information into group data, which may then be shared on an aggregated basis with potential advertisers, research firms, and business partners. Warranty Now Void will not disclose your individual identity or personal data. When Warranty Now Void does present aggregated information to potential advertisers, research firms, and business partners, no one will be able to identify you or contact you. </p>
+
+                <h3>E-mail Services</h3>
+
+                <p>Any/all e-mail addresses sent to us as the result of correspondence with the consumers of Warranty Now Void will not be used or collected for the purposes of reselling to a third party and will not be added to a bulk e-mailing list.</p>
+
+                <p>Warranty Now Void provides users the opportunity to opt-in and opt-out of receiving e-mail communications from us. This is made available during sign-up for our e-mail lists and in e-mail messages delivered from Warranty Now Void. For any list managed by Warranty Now Void, users can use the link in the footer of most e-mail messages to unsubscribe. </p>
+
+                <he>Sharing and Usage Of Information</h3>
+
+                <p>Warranty Now Void never shares, sells, or rents any personal information without your permission, unless ordered by a court of law. Information submitted to us is only available to employees managing this information for purposes of contacting you or sending you emails based on your request for information.</p>
 
             </article>
 
