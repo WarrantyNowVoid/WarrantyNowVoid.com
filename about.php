@@ -68,7 +68,7 @@
                     <script type="text/javascript">
                         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                         var disqus_shortname = 'warrantynowvoid'; // required: replace example with your forum shortname
-                        var disqus_identifier = 'wnv.staging.about_page';
+                        var disqus_identifier = 'wnv.<?php echo $JACKED->config->environment; ?>.about_page';
                         var disqus_title = 'About Warranty Now Void';
                         var disqus_url = '<?php echo $templateVars['postURL']; ?>';
 
