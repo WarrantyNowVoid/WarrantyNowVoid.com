@@ -22,7 +22,7 @@
                         </div>
                         <div class="span3 offset1">
                             <br />
-                            &copy 2013 Warranty Now Void
+                            <a href="/license">&copy 2013 Warranty Now Void</a>
                         </div>
                         <div class="span2 offset1">
                             <img class="bottom-logo" src="/assets/img/template/wnv_small_white.png" data-at2x="/assets/img/template/wnv_small_white@2x.png"  /> 
