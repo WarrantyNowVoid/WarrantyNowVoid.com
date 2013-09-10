@@ -8,11 +8,23 @@
             <div class="footer-perspective">
                 <div class="container footer-front">
                     <div class="row">
-                        <div class="span3 offset2">
+                        <div class="span1 offset1">
+                            <br />
+                            <a href="/advertising">Advertise</a>
+                        </div>
+                        <div class="span1">
+                            <br />
+                            <a href="/code">Code</a>
+                        </div>
+                        <div class="span1">
+                            <br />
+                            <a href="/legal">Legal</a>
+                        </div>
+                        <div class="span3 offset1">
                             <br />
                             &copy 2013 Warranty Now Void
                         </div>
-                        <div class="span3 offset2">
+                        <div class="span2 offset1">
                             <img class="bottom-logo" src="/assets/img/template/wnv_small_white.png" data-at2x="/assets/img/template/wnv_small_white@2x.png"  /> 
                         </div>
                     </div>

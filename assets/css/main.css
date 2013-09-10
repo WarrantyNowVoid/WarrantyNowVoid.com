@@ -452,6 +452,14 @@ footer img.bottom-logo{
     height: 50px;
 }
 
+footer .row{
+    text-align: center;
+}
+
+footer .row a{
+    color: #fff;
+}
+
 .footer-perspective{
     height: 60px;
     margin: 0px;

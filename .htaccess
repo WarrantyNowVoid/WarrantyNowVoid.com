@@ -31,3 +31,9 @@ RewriteRule ^about/?$ about.php [NC]
 RewriteRule ^search/?$ search.php [NC,QSA]
 
 RewriteRule ^advertising/?$ advertising.php [NC]
+
+RewriteRule ^code/?$ code.php [NC]
+
+RewriteRule ^legal/?$ legal.php [NC]
+
+RewriteRule ^license/?$ license.php [NC]
