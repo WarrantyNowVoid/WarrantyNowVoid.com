@@ -49,8 +49,8 @@
                         <a href="http://epiceditor.com/">EpicEditor</a><br />
                         <a href="http://ivaynberg.github.io/select2/">Select2</a><br />
                         <a href="http://bitari.com">MarkovLetterChain</a><br />
-                        <a href="http://www.openwall.com/phpass/">PasswordHash</a>
-                        <a href="http://www.michelf.com/projects/php-markdown">PHP Markdown</a>
+                        <a href="http://www.openwall.com/phpass/">PasswordHash</a><br />
+                        <a href="http://www.michelf.com/projects/php-markdown">PHP Markdown</a><br />
                         <a href="http://milianw.de/">Markdownify</a><br />
                     </blockquote>
                 </p>
