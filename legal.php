@@ -146,7 +146,7 @@
                 (Contact only for copyright matters. For all other inquiries, please contact us <a href="mailto:wnv@WarrantyNowVoid.com.">here</a>.)<br>
 
                 <br>
-                <a href="mailto:wnv@WarrantyNowVoid.com&subject=I%20Think%20You%20Stole%20My%20Crap.">Warranty Now Void</a><br>
+                <a href="mailto:wnv@WarrantyNowVoid.com?subject=I%20Think%20You%20Stole%20My%20Crap.">Warranty Now Void</a><br>
                 <br>
                 <h3>Applicable Laws / Jurisdiction</h3>
                 You agree that the laws of the State of Massachusetts, excluding its conflicts-of-law rules, shall govern these Terms and Conditions. Please note that your use of the Web Site may be subject to other local, state, national, and international laws. You expressly agree that exclusive jurisdiction for any claim or dispute with WNV or relating in any way to your use of the Web Site resides in the courts of the State of Massachusetts, and you further agree and expressly consent to the exercise of personal jurisdiction in the courts of the State of Massachusetts, in connection with any such dispute and including any claim involving WNV or its affiliates, subsidiaries, employees, contractors, officers, directors, telecommunication providers and content providers.<br>
