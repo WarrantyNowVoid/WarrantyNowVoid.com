@@ -100,7 +100,7 @@ $(document).ready(function(){
             try{
                 $("audio#pushit").get(0).currentTime = 0;
                 $("audio#pushit").get(0).play();
-            }
+            }catch(err){}
 
             $("#poopGuy").offset({ top: poopDestinationY, left: viewportWidth + 100 });
             $("#poopGuy").show();
@@ -126,7 +126,7 @@ function finishPooping(){
     $("#poopGuy").animate({ left: -250 }, 5500, 'linear', function(){
         try{
             $("audio#pushit").get(0).pause();
-        }
+        }catch(err){}
         $("#poopGuy").removeClass('walking');
         console.log('DONE POOPING!');
         poopActive = false;
