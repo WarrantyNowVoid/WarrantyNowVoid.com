@@ -378,6 +378,7 @@ aside.fixed-width{
 aside .related{
     margin-top: 30px;
     text-align: left;
+    margin-bottom: 30px;
 }
 
 aside .related .label{
