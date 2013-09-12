@@ -2,7 +2,7 @@
 
     try{
         require('JACKED/jacked_conf.php');
-        $JACKED = new JACKED('Syrup');
+        $JACKED = new JACKED(array('Syrup', 'MySQL'));
 
         $postCount = 20;
         if(isset($_GET['page'])){
@@ -34,12 +34,14 @@
         $templateVars['pager']['prevPageLink'] = '/' . ($page - 1);
 
         $templateVars['featuredBox'] = array();
-        $templateVars['featuredBox']['posts'] = array(
-            1 => 'cdb56',
-            2 => 'fc89c',
-            3 => '832a3',
-            4 => '8024a'
-        );
+
+        $featured = $JACKED->MySQL->query('SELECT * FROM featured WHERE 1');
+
+        $templateVars['featuredBox']['posts'] = array();
+
+        foreach ($featured as $fitem){
+            $templateVars['featuredBox']['posts'][$fitem['position']] = $fitem['guid'];
+        }
 
         include('bodyTop.php');
         include('bodyFeaturedBox.php');
