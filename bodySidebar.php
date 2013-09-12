@@ -35,24 +35,30 @@
                             arsort($relatedIDs);
                             if(count($relatedIDs) > 0){
 
+                            $relPosts = array();
+                            $posted = 0;
+                            while((list($id, $count) = each($relatedIDs)) && $posted < 6){ 
+                                $relPost = $JACKED->Syrup->Blag->findOne(array('guid' => $id));
+                                if($relPost->alive == 1){ 
+                                    $posted++;
+                                    $relPosts[] = $relPost;
+                                }
+                            }
+                            if(count($relPosts > 0)){
                     ?>
 
                     <div class="related">
                         <h3 class="system1">Related Posts</h3>
                         <ul id="related-posts">
                         <?php
-                            $posted = 0;
-                            while((list($id, $count) = each($relatedIDs)) && $posted < 6){ 
-                                $relPost = $JACKED->Syrup->Blag->findOne(array('guid' => $id));
-                                if($relPost->alive == 1){ 
-                                    $posted++;
+                                foreach($relPosts as $relPost){
                                 ?>
 
                             <li class="<?php echo strtolower($relPost->category->name); ?>-hover">
                                 <a href="/post/<?php echo $relPost->guid; ?>"><span class="label <?php echo strtolower($relPost->category->name); ?>"><?php echo $relPost->category->name; ?></span> <span class="related-name"><?php echo $relPost->title; ?></span></a>
                             </li>
 
-                                <?php 
+                            <?php 
                                 }
                             }
                         ?>
