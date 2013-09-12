@@ -92,11 +92,13 @@
             $templateVars['postGrid']['title'] .= ' <em><small>PAGE ' . $page . '</small></em>';
         }
 
-        $templateVars['pager'] = array();
-        $templateVars['pager']['pageNum'] = $page;
-        $templateVars['pager']['hasNext'] = ($totalResultCount > ($postCount * $page));
-        $templateVars['pager']['nextPageLink'] = '/search?q=' . $_GET['q'] . '&page=' . ($page + 1);
-        $templateVars['pager']['prevPageLink'] = '/search?q=' . $_GET['q'] . '&page=' . ($page - 1);
+        if(count($posts) > 0){
+            $templateVars['pager'] = array();
+            $templateVars['pager']['pageNum'] = $page;
+            $templateVars['pager']['hasNext'] = ($totalResultCount > ($postCount * $page));
+            $templateVars['pager']['nextPageLink'] = '/search?q=' . $_GET['q'] . '&page=' . ($page + 1);
+            $templateVars['pager']['prevPageLink'] = '/search?q=' . $_GET['q'] . '&page=' . ($page - 1);
+        }
 
     }catch(MissingQueryException $e){
         $posts = array();
