@@ -86,7 +86,7 @@ $(document).ready(function(){
     $('#poopButton').click(function(eo){
         try{
             ga('send', 'event', 'button', 'click', 'poopGuy');
-        }catch(){}
+        }catch(err){}
 
         poopAnim = new Image();
         poopAnim.src = '/assets/img/template/poop_pooping' + (isRetina? '@2x' : '') + '.gif?lol=' + Math.random();
