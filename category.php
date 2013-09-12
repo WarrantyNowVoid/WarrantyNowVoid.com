@@ -2,7 +2,7 @@
 
     try{
         require('JACKED/jacked_conf.php');
-        $JACKED = new JACKED('Syrup');
+        $JACKED = new JACKED(array('MySQL', 'Syrup'));
 
         if(!(isset($_GET['catname']) && is_string($_GET['catname']))){
             throw new MissingCategoryException();
@@ -20,10 +20,14 @@
             throw new Exception("No posts found");
         }
 
-        $totalResultCount = count($JACKED->Syrup->Blag->find(
-            array('AND' => array('category.guid' => $category->guid, 'alive' => 1)), 
-            array('field' => 'posted', 'direction' => 'DESC')
-        ));
+        // $totalResultCount = count($JACKED->Syrup->Blag->find(
+        //     array('AND' => array('category.guid' => $category->guid, 'alive' => 1)))
+        // ));
+
+        $totalResultCountRes = $JACKED->MySQL->query(
+            "SELECT COUNT(*) AS cnt FROM Blag WHERE category = '" . $category->guid . "' AND alive = 1"
+        );
+        $totalResultCount = $totalResultCountRes[0]['cnt'];
 
         $posts = $JACKED->Syrup->Blag->find(
             array('AND' => array('category.guid' => $category->guid, 'alive' => 1)), 

@@ -11,7 +11,10 @@
             $page = 1;
         }
 
-        $totalResultCount = count($JACKED->Syrup->Blag->find(array('alive' => 1)));
+        // $totalResultCount = $JACKED->Syrup->Blag->count(array('alive' => 1)); 
+
+        $totalResultCountRes = $JACKED->MySQL->query('SELECT COUNT(*) AS cnt FROM Blag WHERE alive = 1');
+        $totalResultCount = $totalResultCountRes[0]['cnt'];
 
         $posts = $JACKED->Syrup->Blag->find(
             array('alive' => 1), 
