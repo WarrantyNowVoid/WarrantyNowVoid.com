@@ -50,7 +50,7 @@
         <?php 
             switch($JACKED->config->environment){
                 case 'production':
-                    $ua = 'UA-43751768-2';
+                    $ua = 'UA-43751768-1';
                     break;
                 case 'staging':
                     $ua = 'UA-43751768-2';
