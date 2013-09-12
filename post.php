@@ -46,7 +46,12 @@
 
             <article class="<?php echo isset($templateVars['fixedWidth'])? 'fixed-width' : ''; ?>">
                 <div class="madmen">
-                    <img src="/leaderboard_ad.png" />
+                    <div class="box-behind">
+                        <a href="/advertising"><img src="/assets/img/template/adblock_info_leaderboard.png" /></a>
+                    </div>
+                    <div class="box-front">
+                        <a href="/advertising"><img src="/assets/img/template/your_ad_here_leaderboard.png" /></a>
+                    </div>
                 </div>
 
                 <h1><?php echo $post->title; ?></h1>

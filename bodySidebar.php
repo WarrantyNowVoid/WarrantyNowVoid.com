@@ -1,6 +1,11 @@
                 <aside class="<?php echo isset($templateVars['fixedWidth'])? 'fixed-width' : ''; ?> pull-right">
                     <div class="madmen">
-                        <img src="/fake_ad.png" />
+                        <div class="box-behind">
+                            <a href="/advertising"><img src="/assets/img/template/adblock_info_square.png" /></a>
+                        </div>
+                        <div class="box-front">
+                            <a href="/advertising"><img src="/assets/img/template/your_ad_here_square.png" /></a>
+                        </div>
                     </div>
 
                     <div class="poop">
