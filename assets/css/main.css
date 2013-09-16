@@ -160,7 +160,8 @@ ul#thenavbar li.searchbox input{
     float: left;
     height: 60px;
     width: 129px;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 15px;
     font-weight: 500;
     padding: 10px;
     border-left: #222 solid 1px;
