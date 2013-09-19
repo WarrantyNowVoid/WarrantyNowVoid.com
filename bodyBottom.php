@@ -43,7 +43,6 @@
             </div>
         </footer>
 
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="/assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="/assets/js/retina.js"></script>
         <script type="text/javascript" src="/assets/js/page.js"></script>
