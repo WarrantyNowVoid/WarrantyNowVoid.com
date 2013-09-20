@@ -80,6 +80,7 @@ $(document).ready(function(){
                     $(document).snowfall({maxSpeed : 10, shadow: true});
             }, 3000);
         });
+        $('#walkenize-button').click(walkenize);
     }
 
     // poop button
