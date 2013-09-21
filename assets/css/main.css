@@ -347,7 +347,7 @@ aside .madmen{
     display: block;
     margin: 10px 0px;
     width: 300px;
-    height: 250px;
+    height: 270px;
 }
 
 aside .madmen img{
@@ -367,7 +367,7 @@ aside .madmen .box-behind{
 
 aside .madmen .box-front{
     z-index: 2;
-    top: -250px;
+    top: -270px;
 }
 
 aside .poop{
