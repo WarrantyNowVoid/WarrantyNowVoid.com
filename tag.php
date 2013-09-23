@@ -8,6 +8,14 @@
             throw new MissingTagException();
         }
 
+        $order = FALSE;
+        if(isset($_GET['order'])){
+            $o = strtoupper($_GET['order']);
+            if($o == 'DESC' || $o == 'ASC'){
+                $order = $o;
+            }
+        }
+
         $tagName = $JACKED->MySQL->sanitize(trim($_GET['tagname']));
 
         $postCount = 20;
@@ -29,7 +37,7 @@
 
         $posts = $JACKED->Syrup->Blag->find(
             array('AND' => array('Curator.canonicalName' => $tagName, 'alive' => 1)),
-            array('field' => 'posted', 'direction' => 'DESC'),
+            array('field' => 'posted', 'direction' => ($order? $order : 'DESC')),
             $postCount,
             (($postCount * $page) - $postCount)
         );

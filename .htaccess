@@ -37,3 +37,9 @@ RewriteRule ^code/?$ code.php [NC]
 RewriteRule ^legal/?$ legal.php [NC]
 
 RewriteRule ^license/?$ license.php [NC]
+
+
+# SPECIALS!
+
+# The Rau Saga
+RewriteRule ^admiral/?$ tag.php?tagname=admiral-rau&order=ASC [NC]

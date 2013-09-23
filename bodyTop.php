@@ -30,6 +30,8 @@
         <link href="/assets/css/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/main.css" rel="stylesheet">
 
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
         <!-- Modernizr -->
         <script type="text/javascript" src="/assets/js/modernizr.min.js"></script>
 
