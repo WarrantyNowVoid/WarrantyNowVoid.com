@@ -133,7 +133,7 @@ ul#thenavbar li.searchbox input{
 #featuredbox .item .image-preview img{
     margin: 0px;
     margin-left: -40%;
-    margin-top: -40%;
+    margin-top: -10%;
     max-width: none;
 }
 
@@ -769,7 +769,7 @@ ul#social-links li img{
 
     #featuredbox .item .image-preview img{
         margin-left: -20%;
-        margin-top: -17%;
+        margin-top: -10%;
     }
 
 
