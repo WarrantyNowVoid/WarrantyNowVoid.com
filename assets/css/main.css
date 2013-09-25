@@ -244,6 +244,10 @@ article img{
     margin: 0 auto;
 }
 
+article li{
+    line-height: 24px;
+}
+
 article img.headliner{
     width: 100%;
     margin-bottom: 30px;
