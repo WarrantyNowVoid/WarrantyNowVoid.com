@@ -860,5 +860,6 @@ ul#social-links li img{
 @media (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1280px) and (min-resolution: 192dpi){ 
     .staremaster .item {
         background: url(/assets/img/template/header_halloween@2x.png) no-repeat center top fixed; 
+        background-size: 1280px 250px;
     }
 }
