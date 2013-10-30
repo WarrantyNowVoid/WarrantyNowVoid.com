@@ -38,7 +38,12 @@
 
 
                     <?php
-                        //related posts! 
+                        
+                        // I do not know how it knows
+                        // that we are monsters 
+                        // but the site has seen the face of its God
+                        // and it has wept, for it saw only its reflection
+                        
                         if($templateVars['pageType']  == 'post' && !(isset($templateVars['error']) && $templateVars['error'])){ 
                             $relatedIDs = array();
                             foreach($post->Curator as $tag){
