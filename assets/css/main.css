@@ -824,6 +824,7 @@ ul#social-links li img{
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
     .staremaster .item {
         background: url(/assets/img/template/header_halloween@2x.png); 
+        background-size: 1280px 250px;
     }
 
     ul#thenavbar li.searchbox input{
