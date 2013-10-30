@@ -23,7 +23,7 @@ body{
 
 .staremaster .item{
     height: 250px;
-    background: url(/assets/img/template/header_scott.png) no-repeat fixed; 
+    background: url(/assets/img/template/header_halloween.png) no-repeat fixed; 
     background-size: contain;
 }
 
@@ -816,7 +816,7 @@ ul#social-links li img{
 /* CREEPY EYES TIME */
 @media (max-width: 1280px) {
     .staremaster .item {
-        background: url(/assets/img/template/header_scott.png) no-repeat center top fixed; 
+        background: url(/assets/img/template/header_halloween.png) no-repeat center top fixed; 
     }
 }
 
