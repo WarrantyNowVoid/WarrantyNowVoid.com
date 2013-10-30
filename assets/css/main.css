@@ -822,6 +822,10 @@ ul#social-links li img{
 
 /* retina displays (mac/ipad only) */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .staremaster .item {
+        background: url(/assets/img/template/header_halloween@2x.png); 
+    }
+
     ul#thenavbar li.searchbox input{
         background: url(/assets/img/template/search_icon@2x.png) center right no-repeat #004D67;
         background-size: 40px 25px;
