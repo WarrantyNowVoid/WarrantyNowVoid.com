@@ -241,6 +241,7 @@ article.fixed-width{
 }
 
 article img{
+    display: block;
     margin: 0 auto;
 }
 
