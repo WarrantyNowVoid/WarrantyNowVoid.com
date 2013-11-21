@@ -117,6 +117,19 @@ $(document).ready(function(){
             });
         }
     });
+
+    // Konami loader
+
+    //no conditions for this yet
+    var dogeloader = new Konami(function(){
+        if(typeof LIBDOGE=="undefined"){
+            yepnope.injectJs('/assets/js/libdoge.min.js', function(){
+                LIBDOGE.controller.buyDoge();
+            });
+        }else{
+            LIBDOGE.controller.buyDoge();
+        }
+    }); 
 });
 
 

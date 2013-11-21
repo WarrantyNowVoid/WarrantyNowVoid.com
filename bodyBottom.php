@@ -45,7 +45,10 @@
 
         <script src="/assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="/assets/js/retina.js"></script>
+        <script type="text/javascript" src="/assets/js/konami.js"></script>
+
         <script type="text/javascript" src="/assets/js/page.js"></script>
+
         <!-- Project Wonderful Ad Box Loader -->
         <script type="text/javascript">
            (function(){function pw_load(){
