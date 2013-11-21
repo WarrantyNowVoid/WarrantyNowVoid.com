@@ -50,6 +50,16 @@ function walkenize(){
     }
 }
 
+function suchDogeWow(){
+    if(typeof LIBDOGE == "undefined"){
+        yepnope.injectJs('/assets/js/libdoge.min.js', function(){
+            LIBDOGE.controller.buyDoge();
+        });
+    }else{
+        LIBDOGE.controller.buyDoge();
+    }
+}
+
 var intervalID = window.setInterval(nextFeature, 10000);
 
 var poopActive = false;
@@ -120,18 +130,18 @@ $(document).ready(function(){
 
     // Konami loader
 
-    //no conditions for this yet
-    var dogeloader = new Konami(function(){
-        if(typeof LIBDOGE=="undefined"){
-            yepnope.injectJs('/assets/js/libdoge.min.js', function(){
-                LIBDOGE.controller.buyDoge();
-            });
+    var eggloader = new Konami(function(){
+        if(typeof easterEgg == "undefined"){
+            // wow such default pretty
+            suchDogeWow();
+        }else if(typeof easterEgg == "function"){
+            easterEgg();
         }else{
-            LIBDOGE.controller.buyDoge();
+            // TODO: string based default eggs like 'doge', 'walken'
+            console.log("Poopguy doesn't know how to handle this easter egg.");
         }
     }); 
 });
-
 
 function finishPooping(){
     window.clearInterval(poopTimer);
