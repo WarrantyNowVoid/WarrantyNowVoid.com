@@ -121,9 +121,25 @@ $(document).ready(function(){
             suchDogeWow();
         }else if(typeof easterEgg == "function"){
             easterEgg();
+        }else if(typeof easterEgg == "string"){
+            switch(easterEgg){
+                case 'snow':
+                    startSnowing();
+                    break;
+                case 'walken':
+                    walkenize();
+                    break;
+                case 'poopguy':
+                    startPooping();
+                    break;
+
+                default:
+                    suchDogeWow();
+                    break;
+            }
         }else{
-            // TODO: string based default eggs like 'doge', 'walken'
-            console.log("Poopguy doesn't know how to handle this easter egg.");
+            console.log("Poopguy doesn't know what the fuck to do with this easter egg. You get doge instead.");
+            suchDogeWow();
         }
     }); 
 });
