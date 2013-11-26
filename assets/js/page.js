@@ -40,13 +40,42 @@ function switchToFeature(itemid){
     $('div#featuredbox ul.titletabs li[data-itemid=' + itemid + ']').addClass('active');
 }
 
+function startSnowing(){
+    if(typeof $.snowfall == "undefined"){
+        yepnope.injectJs('/assets/js/snowfall.jquery.js', function(){
+            $(document).snowfall({maxSpeed : 10, shadow: true});
+        });
+    }else{
+        $(document).snowfall({maxSpeed : 10, shadow: true});
+    }
+}
+
 function walkenize(){
-    if($('#walkenize-button').length > 0){
-        $('#walkenize-button').hide();
+    $('#walkenize-button').hide();
+    if(typeof $.snowfall == "undefined"){
+        startSnowing();
+        var walkenDelayer = window.setTimeout(function(){
+            $(document).snowfall('clear');
+            $(document).snowfall({image :"/assets/img/template/walken_flake.png", minSize: 10, maxSize:69});
+            $("body").append('<audio id="walkenmp3"><source src="/assets/mp3/winterwonderland.mp3" type="audio/mpeg" /></audio>');
+            $("audio#walkenmp3").trigger("play");
+        }, 1000);
+    }else{
         $(document).snowfall('clear');
         $(document).snowfall({image :"/assets/img/template/walken_flake.png", minSize: 10, maxSize:69});
         $("body").append('<audio id="walkenmp3"><source src="/assets/mp3/winterwonderland.mp3" type="audio/mpeg" /></audio>');
         $("audio#walkenmp3").trigger("play");
+    }
+    
+}
+
+function suchDogeWow(){
+    if(typeof LIBDOGE == "undefined"){
+        yepnope.injectJs('/assets/js/libdoge.min.js', function(){
+            LIBDOGE.controller.buyDoge();
+        });
+    }else{
+        LIBDOGE.controller.buyDoge();
     }
 }
 
@@ -75,63 +104,80 @@ $(document).ready(function(){
 
     //snowfall plugin
     if($('#walkenize-button').length > 0){
-        yepnope.injectJs('/assets/js/snowfall.jquery.js', function(){
-            var snowfallTimer = window.setTimeout(function(){
-                    $(document).snowfall({maxSpeed : 10, shadow: true});
-            }, 3000);
-        });
+        startSnowing();
         $('#walkenize-button').click(walkenize);
     }
 
     // poop button
     $('#poopButton').click(function(eo){
-        try{
-            ga('send', 'event', 'button', 'click', 'poopGuy');
-        }catch(err){}
-
-        poopAnim = new Image();
-        poopAnim.src = '/assets/img/template/poop_pooping' + (isRetina? '@2x' : '') + '.gif?lol=' + Math.random();
-        if(!poopActive){
-            poopActive = true;
-            pooCounter++;
-            console.log('POOP NUMBER ' + pooCounter + ' INBOUND!');
-
-            var viewportWidth = $(window).width();
-            var viewportHeight = $(window).height();
-
-            var poopDestinationX = Math.floor((Math.random() * (viewportWidth - 400)) + 100);
-            var poopDestinationY = $(window).scrollTop() + viewportHeight / 3;
-
-            try{
-                $("audio#pushit").get(0).currentTime = 0;
-                $("audio#pushit").get(0).play();
-            }catch(err){}
-
-            $("#poopGuy").offset({ top: poopDestinationY, left: viewportWidth + 100 });
-            $("#poopGuy").show();
-            $("#poopGuy").addClass('walking');
-            $("#poopGuy").animate({ left: poopDestinationX }, 5000, 'linear', function(){
-                $("#poopGuy").removeClass('walking');
-                $("#poopGuy").css('background-image', 'url(' + poopAnim.src + ')');
-                poopTimer = window.setInterval(finishPooping, 4500);
-            });
-        }
+        startPooping();
     });
 
     // Konami loader
 
-    //no conditions for this yet
-    var dogeloader = new Konami(function(){
-        if(typeof LIBDOGE=="undefined"){
-            yepnope.injectJs('/assets/js/libdoge.min.js', function(){
-                LIBDOGE.controller.buyDoge();
-            });
+    var eggloader = new Konami(function(){
+        if(typeof easterEgg == "undefined"){
+            // wow such default pretty
+            suchDogeWow();
+        }else if(typeof easterEgg == "function"){
+            easterEgg();
+        }else if(typeof easterEgg == "string"){
+            switch(easterEgg){
+                case 'snow':
+                    startSnowing();
+                    break;
+                case 'walken':
+                    walkenize();
+                    break;
+                case 'poopguy':
+                    startPooping();
+                    break;
+
+                default:
+                    suchDogeWow();
+                    break;
+            }
         }else{
-            LIBDOGE.controller.buyDoge();
+            console.log("Poopguy doesn't know what the fuck to do with this easter egg. You get doge instead.");
+            suchDogeWow();
         }
     }); 
 });
 
+
+function startPooping(){
+    try{
+        ga('send', 'event', 'button', 'click', 'poopGuy');
+    }catch(err){}
+
+    poopAnim = new Image();
+    poopAnim.src = '/assets/img/template/poop_pooping' + (isRetina? '@2x' : '') + '.gif?lol=' + Math.random();
+    if(!poopActive){
+        poopActive = true;
+        pooCounter++;
+        console.log('POOP NUMBER ' + pooCounter + ' INBOUND!');
+
+        var viewportWidth = $(window).width();
+        var viewportHeight = $(window).height();
+
+        var poopDestinationX = Math.floor((Math.random() * (viewportWidth - 400)) + 100);
+        var poopDestinationY = $(window).scrollTop() + viewportHeight / 3;
+
+        try{
+            $("audio#pushit").get(0).currentTime = 0;
+            $("audio#pushit").get(0).play();
+        }catch(err){}
+
+        $("#poopGuy").offset({ top: poopDestinationY, left: viewportWidth + 100 });
+        $("#poopGuy").show();
+        $("#poopGuy").addClass('walking');
+        $("#poopGuy").animate({ left: poopDestinationX }, 5000, 'linear', function(){
+            $("#poopGuy").removeClass('walking');
+            $("#poopGuy").css('background-image', 'url(' + poopAnim.src + ')');
+            poopTimer = window.setInterval(finishPooping, 4500);
+        });
+    }
+}
 
 function finishPooping(){
     window.clearInterval(poopTimer);
