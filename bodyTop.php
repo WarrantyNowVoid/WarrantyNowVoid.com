@@ -10,7 +10,7 @@
         <meta charset="utf-8">
         <title>Warranty Now Void<?php echo isset($templateVars['pageTitle'])? ' - ' . $templateVars['pageTitle'] : ''; ?></title>
         <meta name="viewport" content="width=1024px, height=device-height">
-        <meta name="description" content="">
+        <meta name="description" content="It's a website. With poop jokes and stuff. Read it. Or don't. I'm not your dad.">
         <meta name="author" content="">
 
         <meta property="og:site_name" content="Warranty Now Void"/>
