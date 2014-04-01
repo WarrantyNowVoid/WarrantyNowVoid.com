@@ -50,7 +50,7 @@
             <header class="staremaster">
                 <div class="item active">
                     <div class="container">
-                        <a href="<?php echo $JACKED->config->base_url; ?>"><img id="logo" src="/assets/img/template/wnv_white.png" data-at2x="/assets/img/template/wnv_white@2x.png" /></a>
+                        <a href="<?php echo $JACKED->config->base_url; ?>"><img id="logo" src="/assets/img/template/wnv_hl2.png" data-at2x="/assets/img/template/wnv_hl2@2x.png" /></a>
                         <nav>
                             <ul id="thenavbar">
                                 <li class="videos">
