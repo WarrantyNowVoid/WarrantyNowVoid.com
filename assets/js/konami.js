@@ -10,7 +10,7 @@
  * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1 and Dolphin Browser
  */
 
-var Konami = function (callback) {
+var Konami = function (callback, key_pattern) {
     var konami = {
         addEvent: function (obj, type, fn, ref_obj) {
             if (obj.addEventListener)
@@ -25,7 +25,7 @@ var Konami = function (callback) {
             }
         },
         input: "",
-        pattern: "38384040373937396665",
+        pattern: typeof key_pattern !== 'undefined' ?  key_pattern : "38384040373937396665",
         load: function (link) {
             this.addEvent(document, "keydown", function (e, ref_obj) {
                 if (ref_obj) konami = ref_obj; // IE

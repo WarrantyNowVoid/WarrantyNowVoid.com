@@ -79,6 +79,10 @@ function suchDogeWow(){
     }
 }
 
+function adultCatFinder(){
+    $('body').append('<iframe src="http://adultcatfinder.com/embed/" width="320" height="430" style="position:fixed;bottom:0px;right:10px;z-index:100" frameBorder="0"></iframe>');
+}
+
 var intervalID = window.setInterval(nextFeature, 10000);
 
 var poopActive = false;
@@ -129,6 +133,9 @@ $(document).ready(function(){
                 case 'walken':
                     walkenize();
                     break;
+                case 'adultcatfinder':
+                    adultCatFinder();
+                    break;
                 case 'poopguy':
                     startPooping();
                     break;
@@ -142,6 +149,9 @@ $(document).ready(function(){
             suchDogeWow();
         }
     }); 
+
+    // and also too as well
+    var meow = new Konami(adultCatFinder, '77697987');
 });
 
 
