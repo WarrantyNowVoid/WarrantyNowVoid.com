@@ -29,12 +29,12 @@
                 <p>The important emails are as follows:
                 
                 <blockquote>General Contact: <a href="mailto:wnv@warrantynowvoid.com">wnv@warrantynowvoid.com</a><br />
-                    Pope: <a href="mailto:pope@warrantynowvoid.com">pope@warrantynowvoid.com</a><br />
+                    Pope: <a href="mailto:pope@warrantynowvoid.com">pope@warrantynowvoid.com</a> (<a href="http://reddit.com/u/pettazz" target="_blank">/u/pettazz</a> on reddit)<br />
                     Scott: <a href="mailto:scawt@warrantynowvoid.com">scawt@warrantynowvoid.com</a><br />
                     The Admiral: <a href="mailto:admiral@warrantynowvoid.com">admiral@warrantynowvoid.com</a><br />
                 </blockquote>
 
-                And whoever else is working on this site, I don't actually know anymore…</p>
+                And whoever else is working on this site, I don't actually know anymore...</p>
 
                 <p>In closing, welcome aboard! We hope that you enjoy your time with us, and while we recognize that a lot of what we say and do is wildly inappropriate, we hope that you've the maturity to select what content you can and cannot handle. I can personally guarantee that nothing we produce will make it even 1% of the way to "The Grossest Thing On The Internet," so take some comfort in that. To help get you acclimated to this new environment, we've selected some sample materials for your perusal:</p>
 
