@@ -8,10 +8,10 @@
                                 if($JACKED->config->environment == 'production' || $JACKED->config->environment == 'staging'){
                             ?>
                             <!-- Project Wonderful Ad Box Code -->
-                            <div id="pw_adbox_70777_7_0"></div>
+                            <div style="text-align:center;"><div style="display:inline-block;" id="pw_adbox_75173_7_0"></div></div>
                             <script type="text/javascript"></script>
-                            <noscript><map name="admap70777" id="admap70777"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=70777&type=7" shape="rect" coords="0,0,300,250" title="" alt="" target="_blank" /></map>
-                            <table cellpadding="0" cellspacing="0" style="width:300px;border-style:none;background-color:#ffffff;"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=70777&type=7" style="width:300px;height:250px;border-style:none;" usemap="#admap70777" alt="" /></td></tr><tr><td style="background-color:#ffffff;" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=70777&type=7" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center></td></tr></table>
+                            <noscript><div style="text-align:center;"><div style="display:inline-block;"><map name="admap75173" id="admap75173"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=75173&type=7" shape="rect" coords="0,0,300,250" title="" alt="" target="_blank" rel="nofollow" /></map>
+                            <table cellpadding="0" cellspacing="0" style="width:300px;border-style:none;background-color:#ffffff;"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=75173&type=7" style="width:300px;height:250px;border-style:none;" usemap="#admap75173" alt="" /></td></tr><tr><td style="background-color:#ffffff;" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=75173&type=7" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center></td></tr></table></div></div>
                             </noscript>
                             <!-- End Project Wonderful Ad Box Code -->
                             <?php
