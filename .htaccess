@@ -42,5 +42,11 @@ RewriteRule ^license/?$ license.php [NC]
 
 # SPECIALS!
 
+# Current liveblag
+RewriteRule ^live/?$ post.php?postid=94c7c [NC]
+
 # The Rau Saga
 RewriteRule ^admiral/?$ tag.php?tagname=admiral-rau&order=ASC [NC]
+
+# Snowpocalypse 2015 liveblog
+RewriteRule ^snow2015/?$ post.php?postid=94c7c [NC]
