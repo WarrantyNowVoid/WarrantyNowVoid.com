@@ -2,6 +2,9 @@
     if(!isset($templateVars['pageType'])){
         $templateVars['pageType'] = 'system';
     }
+
+    //temporary hack for liveblag
+    $live = (isset($_GET['postid']) && is_string($_GET['postid']) && $_GET['postid'] == '94c7c';
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +34,22 @@
         <link href="/assets/css/main.css" rel="stylesheet">
 
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+        <?php
+            if($live){
+        ?>
+
+        <script type="text/javascript">
+            var intervalID = window.setInterval(function(){
+                $.get('http://warrantynowvoid.com/live_update.php', function(data){
+                        $('article').html(data.body);
+                });
+            }, 30000);
+        </script>
+
+        <?php
+            }
+        ?>
 
         <!-- Modernizr -->
         <script type="text/javascript" src="/assets/js/modernizr.min.js"></script>
