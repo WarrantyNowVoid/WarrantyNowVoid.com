@@ -42,7 +42,7 @@
         <script type="text/javascript">
             var intervalID = window.setInterval(function(){
                 $.get('http://warrantynowvoid.com/live_update.php', function(data){
-                    $('article').children('p, hr').remove()
+                    $('article').children('p, hr, div.alert').remove()
                     $(data.body).insertAfter($('article').children('h1'));
                 });
             }, 30000);
