@@ -4,7 +4,7 @@
     }
 
     //temporary hack for liveblag
-    $live = (isset($_GET['postid']) && is_string($_GET['postid']) && $_GET['postid'] == '94c7c';
+    $live = (isset($_GET['postid']) && is_string($_GET['postid']) && $_GET['postid'] == '94c7c');
 ?>
 
 <!DOCTYPE html>
