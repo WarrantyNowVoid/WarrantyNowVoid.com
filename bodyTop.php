@@ -43,7 +43,7 @@
             var intervalID = window.setInterval(function(){
                 $.get('http://warrantynowvoid.com/live_update.php', function(data){
                     $('article').children('p:not(.byline), hr, div.alert').remove()
-                    $(data.body).insertAfter($('article').children('h1'));
+                    $(data.body).insertAfter($('article').children('p.byline'));
                 });
             }, 30000);
         </script>
