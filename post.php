@@ -30,15 +30,21 @@
         if($templateVars['contentType'] == 'comics' || $templateVars['contentType'] == 'videos'){
             $templateVars['fixedWidth'] = TRUE;
         }
-        //find the post image
-        $tagExists = strpos($post->content, '<img class="headliner ');
-        if(!($tagExists === FALSE)){
-            $templateVars['postImage'] = strstr($post->content, '/>', TRUE) . '/>';
-            $srcpos = strpos($templateVars['postImage'], 'src="/') + 6;
-            $quotpos = strpos($templateVars['postImage'], '"', $srcpos);
-            $templateVars['postImageURL'] = $JACKED->config->base_url . substr($templateVars['postImage'], $srcpos, $quotpos - $srcpos);
+        //if we have a thumbnail, pass it along
+        if($post->thumbnail){
+            $templateVars['postImageURL'] = $JACKED->config->base_url . 'assets/img/lol/' . $post->thumbnail;
         }else{
-            $templateVars['postImageURL'] = $JACKED->config->base_url . 'assets/ico/favicon_src/wnv_512.png';
+            // otherwise find the post image
+            //  TODO: make this less fucking stupid
+            $tagExists = strpos($post->content, '<img class="headliner ');
+            if(!($tagExists === FALSE)){
+                $templateVars['postImage'] = strstr($post->content, '/>', TRUE) . '/>';
+                $srcpos = strpos($templateVars['postImage'], 'src="/') + 6;
+                $quotpos = strpos($templateVars['postImage'], '"', $srcpos);
+                $templateVars['postImageURL'] = $JACKED->config->base_url . substr($templateVars['postImage'], $srcpos, $quotpos - $srcpos);
+            }else{
+                $templateVars['postImageURL'] = $JACKED->config->base_url . 'assets/ico/favicon_src/wnv_512.png';
+            }
         }
 
         include('bodyTop.php');
