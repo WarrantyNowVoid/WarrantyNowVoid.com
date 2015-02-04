@@ -39,6 +39,11 @@ RewriteRule ^legal/?$ legal.php [NC]
 
 RewriteRule ^license/?$ license.php [NC]
 
+RewriteRule ^feed/?$ rss.php [NC]
+RewriteRule ^rss/?$ rss.php [NC]
+RewriteRule ^feed\.xml/?$ rss.php [NC]
+RewriteRule ^rss\.xml/?$ rss.php [NC]
+
 
 # SPECIALS!
 
