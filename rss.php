@@ -33,7 +33,7 @@
         <item>
             <title><![CDATA[ <?php echo $post->title; ?> ]]></title>
             <link><?php echo $JACKED->config->base_url . 'post/' . $post->guid; ?></link>
-            <description><![CDATA[ <?php echo ($post->thumbnail? '<img src="http://warrantynowvoid.com/' . $post->thumbnail . '" />': '') . $post->headline; ?> ]]></description>
+            <description><![CDATA[ <?php echo ($post->thumbnail? '<img src="http://warrantynowvoid.com/assets/img/lol/' . $post->thumbnail . '" />': '') . $post->headline; ?> ]]></description>
             <pubDate><?php echo date('r', $post->posted); ?></pubDate>
             <guid isPermaLink="true"><?php echo 'http://warrantynowvoid.com/post/' . $post->guid; ?></guid>
         </item>
