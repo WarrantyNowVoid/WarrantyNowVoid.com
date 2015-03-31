@@ -51,31 +51,6 @@
 ?>
 
             <article class="<?php echo isset($templateVars['fixedWidth'])? 'fixed-width' : ''; ?>">
-                <div class="madmen">
-                    <div class="box-behind">
-                        <a href="/advertising"><img src="/assets/img/template/adblock_info_leaderboard.png" /></a>
-                    </div>
-                    <div class="box-front">
-                        <?php
-                            if($JACKED->config->environment == 'production' || $JACKED->config->environment == 'staging'){
-                        ?>
-                        <!-- Project Wonderful Ad Box Code -->
-                        <div style="text-align:center;"><div style="display:inline-block;" id="pw_adbox_75174_5_0"></div></div>
-                        <script type="text/javascript"></script>
-                        <noscript><div style="text-align:center;"><div style="display:inline-block;"><map name="admap75174" id="admap75174"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=75174&type=5" shape="rect" coords="0,0,728,90" title="" alt="" target="_blank" rel="nofollow" /></map>
-                        <table cellpadding="0" cellspacing="0" style="width:728px;border-style:none;background-color:#ffffff;"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=75174&type=5" style="width:728px;height:90px;border-style:none;" usemap="#admap75174" alt="" /></td></tr><tr><td style="background-color:#ffffff;" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=75174&type=5" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center></td></tr></table></div></div>
-                        </noscript>
-                        <!-- End Project Wonderful Ad Box Code -->
-                        <?php
-                            }else{
-                        ?>
-                        <a href="/advertising"><img src="/assets/img/template/your_ad_here_leaderboard.png" /></a>
-                        <?php
-                            }
-                        ?>
-                    </div>
-                </div>
-
                 <h1><?php echo $post->title; ?></h1>
                 <p class="byline">
                     <span class="label <?php echo $templateVars['contentType']; ?>"><?php echo $templateVars['contentType']; ?></span> <span class="datestamp"><?php echo date("F j, Y", $post->posted); ?></span>
@@ -137,6 +112,31 @@
                             <li><a href="http://reddit.com/submit?url=<?php echo $templateVars['postURL']; ?>&title=<?php echo rawurlencode($post->title); ?>" target="_blank"><img src="/assets/img/template/share_reddit.png" /></a></li>
                             <li><a href="http://www.facebook.com/sharer.php?u=<?php echo $templateVars['postURL']; ?>" target="_blank"><img src="/assets/img/template/share_facebook.png" /></a></li>
                         </ul>
+                    </div>
+
+                    <div class="madmen">
+                        <div class="box-behind">
+                            <a href="/advertising"><img src="/assets/img/template/adblock_info_leaderboard.png" /></a>
+                        </div>
+                        <div class="box-front">
+                            <?php
+                                if($JACKED->config->environment == 'production' || $JACKED->config->environment == 'staging'){
+                            ?>
+                            <!-- Project Wonderful Ad Box Code -->
+                            <div style="text-align:center;"><div style="display:inline-block;" id="pw_adbox_75174_5_0"></div></div>
+                            <script type="text/javascript"></script>
+                            <noscript><div style="text-align:center;"><div style="display:inline-block;"><map name="admap75174" id="admap75174"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=75174&type=5" shape="rect" coords="0,0,728,90" title="" alt="" target="_blank" rel="nofollow" /></map>
+                            <table cellpadding="0" cellspacing="0" style="width:728px;border-style:none;background-color:#ffffff;"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=75174&type=5" style="width:728px;height:90px;border-style:none;" usemap="#admap75174" alt="" /></td></tr><tr><td style="background-color:#ffffff;" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=75174&type=5" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center></td></tr></table></div></div>
+                            </noscript>
+                            <!-- End Project Wonderful Ad Box Code -->
+                            <?php
+                                }else{
+                            ?>
+                            <a href="/advertising"><img src="/assets/img/template/your_ad_here_leaderboard.png" /></a>
+                            <?php
+                                }
+                            ?>
+                        </div>
                     </div>
 
                     <div id="disqus_thread"></div>

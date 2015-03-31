@@ -281,10 +281,6 @@ article.fixed-width img.content{
     width: 100%;
 }
 
-article .madmen{
-    display: none;
-}
-
 article .madmen div{
     position: relative;
     left: 0px;
@@ -300,14 +296,14 @@ article .madmen .box-front{
     top: -90px;
 }
 
-article.fixed-width .madmen{
+article .madmen{
     display: block;
     width: 728px;
     height: 90px;
     margin: -10px 0px 30px 36px;
 }
 
-article.fixed-width .madmen img{
+article .madmen img{
     width: 728px;
     height: 90px;
 }   
