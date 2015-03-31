@@ -805,6 +805,12 @@ ul#social-links li img{
 
 /* less wide window */
 @media (max-width: 1200px) {
+    article.fixed-width .madmen{
+        width: 728px;
+        height: 90px;
+        margin: 30px 26px;
+    }
+    
     article .madmen{
         width: 580px;
         height: 72px;
