@@ -30,7 +30,7 @@
 
                 <h3>Want to Advertise on WNV?</h3>
 
-                <p>Ad space on WNV is managed by <a href="http://www.projectwonderful.com/advertisehere.php?id=70777" target="_blank">Project Wonderful</a>, in rotation with our own ads. If you'd like to get in on the ground floor and show the poor souls lost enough to find themselves on WNV a good time, contact us at <a href="mailto:wnv@warrantynowvoid.com">wnv@warrantynowvoid.com</a>.</p>
+                <p>Ad space on WNV is managed by <a href="https://www.projectwonderful.com/adsearch.php?publisher=90388&minhits=0&minbids=0&mincurrentbid=0&submit=1" target="_blank">Project Wonderful</a>, in rotation with our own ads. If you'd like to get in on the ground floor and show the poor souls lost enough to find themselves on WNV a good time, contact us at <a href="mailto:wnv@warrantynowvoid.com">wnv@warrantynowvoid.com</a>.</p>
 
             </article>
 
