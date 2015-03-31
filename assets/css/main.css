@@ -303,7 +303,7 @@ article .madmen{
     margin: -10px 0px 30px 36px;
 }
 
-article .madmen img, article .madmen table, article .madmen tr{
+article .madmen img, article .madmen table, article .madmen tr:first{
     width: 728px !important;
     height: 90px !important;
 }   
@@ -805,7 +805,7 @@ ul#social-links li img{
 
 /* less wide window */
 @media (max-width: 1200px) { 
-    article .madmen img, article .madmen table, article .madmen tr{
+    article .madmen img, article .madmen table, article .madmen tr:first{
         width: 580px !important;
         height: 72px !important;
     }  
@@ -816,7 +816,7 @@ ul#social-links li img{
         margin: 30px 26px;
     }
 
-    article.fixed-width .madmen img, article .madmen table, article .madmen tr{
+    article.fixed-width .madmen img, article .madmen table, article .madmen tr:first{
         width: 728px !important;
         height: 90px !important;
     }
