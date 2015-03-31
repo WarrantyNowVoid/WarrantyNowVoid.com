@@ -810,7 +810,12 @@ ul#social-links li img{
         height: 90px;
         margin: 30px 26px;
     }
-    
+
+    article.fixed-width .madmen img{
+        width: 728px;
+        height: 90px;
+    }
+
     article .madmen{
         width: 580px;
         height: 72px;
