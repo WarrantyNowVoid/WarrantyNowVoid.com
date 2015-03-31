@@ -123,10 +123,10 @@
                                 if($JACKED->config->environment == 'production' || $JACKED->config->environment == 'staging'){
                             ?>
                             <!-- Project Wonderful Ad Box Code -->
-                            <div style="text-align:center;"><div style="display:inline-block;" id="pw_adbox_75174_5_0"></div></div>
+                            <div id="pw_adbox_76089_1_0"></div>
                             <script type="text/javascript"></script>
-                            <noscript><div style="text-align:center;"><div style="display:inline-block;"><map name="admap75174" id="admap75174"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=75174&type=5" shape="rect" coords="0,0,728,90" title="" alt="" target="_blank" rel="nofollow" /></map>
-                            <table cellpadding="0" cellspacing="0" style="width:728px;border-style:none;background-color:#ffffff;"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=75174&type=5" style="width:728px;height:90px;border-style:none;" usemap="#admap75174" alt="" /></td></tr><tr><td style="background-color:#ffffff;" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=75174&type=5" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center></td></tr></table></div></div>
+                            <noscript><map name="admap76089" id="admap76089"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=76089&type=1" shape="rect" coords="0,0,468,60" title="" alt="" target="_blank" /></map>
+                            <table cellpadding="0" cellspacing="0" style="width:468px;border-style:none;background-color:#ffffff;"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=76089&type=1" style="width:468px;height:60px;border-style:none;" usemap="#admap76089" alt="" /></td></tr><tr><td style="background-color:#ffffff;" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=76089&type=1" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center></td></tr></table>
                             </noscript>
                             <!-- End Project Wonderful Ad Box Code -->
                             <?php
