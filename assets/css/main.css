@@ -303,9 +303,9 @@ article .madmen{
     margin: -10px 0px 30px 36px;
 }
 
-article .madmen img{
-    width: 728px;
-    height: 90px;
+article .madmen img, article .madmen table, article .madmen tr{
+    width: 728px !important;
+    height: 90px !important;
 }   
 
 ul#comic-controls{
@@ -822,9 +822,9 @@ ul#social-links li img{
         margin: 30px 0px;
     }    
 
-    article .madmen img{
-        width: 580px;
-        height: 72px;
+    article .madmen img, article .madmen table, article .madmen tr{
+        width: 580px !important;
+        height: 72px !important;
     }  
 }
 
