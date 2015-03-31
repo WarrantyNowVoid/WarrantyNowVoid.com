@@ -740,14 +740,6 @@ ul#social-links li img{
         margin-left: 0px;
     }
 
-    article .madmen{
-        display: none;
-    }
-
-    article.fixed-width .madmen{
-        display: none;
-    }
-
     aside.fixed-width{
         display: block;
     }
@@ -807,7 +799,15 @@ ul#social-links li img{
 
 /* less wide window */
 @media (max-width: 1200px) {
-    
+    article .madmen{
+        width: 600px;
+        height: 74px;
+    }    
+
+    article .madmen img{
+        width: 600px;
+        height: 74px;
+    }  
 }
 
 /* CREEPY EYES TIME */
